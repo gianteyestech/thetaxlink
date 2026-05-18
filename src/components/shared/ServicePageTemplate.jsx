@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import CTASection from "../home/CTASection";
 
 export default function ServicePageTemplate({ icon: Icon, color, title, subtitle, description, features, benefits }) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <>
       {/* Hero */}
@@ -14,9 +16,13 @@ export default function ServicePageTemplate({ icon: Icon, color, title, subtitle
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/3 rounded-full blur-3xl" />
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="max-w-2xl">
-            <div className={`w-14 h-14 rounded-2xl ${color} flex items-center justify-center mb-6 shadow-gold`}>
+            <motion.div
+              animate={shouldReduceMotion ? undefined : { y: [0, -8, 0], rotate: [0, -3, 3, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+              className={`w-14 h-14 rounded-2xl ${color} flex items-center justify-center mb-6 shadow-gold`}
+            >
               <Icon className="w-7 h-7" />
-            </div>
+            </motion.div>
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-4">{title}</h1>
             <p className="text-lg text-white/65 leading-relaxed">{subtitle}</p>
           </motion.div>
@@ -84,7 +90,7 @@ export default function ServicePageTemplate({ icon: Icon, color, title, subtitle
                 className="bg-white rounded-2xl p-6 shadow-card hover:shadow-card-hover border border-gray-100 hover:border-[#F5C400]/40 transition-all duration-300 group overflow-hidden relative"
               >
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#F5C400] to-[#FFD633] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
-                <div className="w-11 h-11 rounded-xl bg-[#1E3A6E]/6 flex items-center justify-center mb-4 group-hover:bg-[#F5C400]/15 transition-colors">
+                <div className="w-11 h-11 rounded-xl bg-[#1E3A6E]/6 flex items-center justify-center mb-4 group-hover:bg-[#F5C400]/15 transition-all duration-300 group-hover:scale-110">
                   <b.icon className="w-5 h-5 text-[#1E3A6E]" />
                 </div>
                 <h3 className="font-semibold text-[#1E3A6E] mb-2 text-sm">{b.title}</h3>
