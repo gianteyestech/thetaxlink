@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+
+    /* TTL Brand Colors */
+    --navy: 222 57% 27%;           /* #1E3A6E deep navy */
+    --navy-dark: 222 60% 14%;      /* #0E1F3D darkest navy */
+    --navy-mid: 222 50% 20%;       /* #192e55 */
+    --gold: 47 100% 48%;           /* #F5C400 */
+    --gold-light: 47 100% 60%;     /* #FFD633 */
+    --charcoal: 0 0% 29%;          /* #4A4A4A */
+
+    --background: 210 20% 98%;
+    --foreground: 222 57% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 57% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 57% 15%;
+
+    --primary: 222 57% 27%;        /* navy */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 47 100% 48%;      /* gold */
+    --secondary-foreground: 222 57% 15%;
+
+    --muted: 210 16% 93%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 47 100% 48%;
+    --accent-foreground: 222 57% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 222 57% 27%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 222 60% 6%;
+    --foreground: 0 0% 95%;
+    --card: 222 55% 10%;
+    --card-foreground: 0 0% 95%;
+    --popover: 222 55% 10%;
+    --popover-foreground: 0 0% 95%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 222 57% 27%;
+    --secondary: 47 100% 48%;
+    --secondary-foreground: 222 57% 15%;
+    --muted: 222 40% 14%;
+    --muted-foreground: 210 14% 60%;
+    --accent: 47 100% 48%;
+    --accent-foreground: 222 57% 15%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 222 40% 18%;
+    --input: 222 40% 18%;
+    --ring: 47 100% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glass morphism */
+.glass {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-dark {
+  background: rgba(14, 31, 61, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+/* Gold shimmer line */
+.gold-line {
+  position: relative;
+}
+.gold-line::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, #F5C400, #FFD633);
+  border-radius: 2px;
+}
+
+/* Elegant gradient text */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #F5C400 0%, #FFD633 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-navy {
+  background: linear-gradient(135deg, #1E3A6E 0%, #2d5091 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle noise texture for hero */
+.hero-texture {
+  background-image: 
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(245, 196, 0, 0.08), transparent),
+    radial-gradient(ellipse 60% 80% at 80% 50%, rgba(30, 58, 110, 0.03), transparent);
+}
