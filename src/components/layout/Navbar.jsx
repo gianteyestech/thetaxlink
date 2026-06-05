@@ -42,7 +42,7 @@ export default function Navbar() {
           <img
             src="/the-taxlink-logo.svg"
             alt="The Tax Link"
-            className="h-16 w-auto object-contain drop-shadow-sm"
+            className="h-[72px] w-auto object-contain drop-shadow-sm"
           />
         </Link>
 

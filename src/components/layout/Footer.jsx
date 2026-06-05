@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 
 const serviceLinks = [
   { name: "Business Advice", path: "/business-advice" },
@@ -20,9 +20,15 @@ const quickLinks = [
   { name: "Terms & Conditions", path: "/terms" },
 ];
 
+const socials = [
+  { label: "WhatsApp", href: "https://wa.me/353851330866", icon: MessageCircle, external: true },
+  { label: "Email", href: "mailto:info@thetaxlink.com", icon: Mail, external: false },
+  { label: "Phone", href: "tel:+353851330866", icon: Phone, external: false },
+];
+
 export default function Footer() {
   return (
-    <footer className="bg-[#0E1F3D] text-white">
+    <footer className="bg-gradient-to-b from-white to-[#F8F9FC] text-[#4A4A4A] border-t border-[#1E3A6E]/10">
       {/* Gold accent line */}
       <div className="h-1 w-full bg-gradient-to-r from-[#F5C400] via-[#FFD633] to-[#F5C400]" />
 
@@ -31,44 +37,41 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <div className="mb-5">
-              <div className="inline-block bg-white rounded-xl px-3 py-2 shadow-sm">
-                <img
-                  src="/the-taxlink-logo.svg"
-                  alt="The Tax Link"
-                  className="h-10 w-auto object-contain"
-                />
-              </div>
-            </div>
-            <p className="text-white/55 text-sm leading-relaxed mb-6">
-              Expert Accounting & Tax Solutions - helping you save more and grow faster.
+            <Link to="/" className="inline-block mb-6 transition-transform duration-300 hover:scale-[1.02]">
+              <img
+                src="/the-taxlink-logo.svg"
+                alt="The Tax Link"
+                className="h-20 w-auto object-contain"
+              />
+            </Link>
+            <p className="text-[#4A4A4A]/70 text-sm leading-relaxed mb-6 max-w-xs">
+              Expert Accounting &amp; Tax Solutions — helping you save more and grow faster.
             </p>
-            <div className="flex items-center gap-2">
-              <a href="https://wa.me/353851330866" target="_blank" rel="noopener noreferrer"
-                className="w-9 h-9 rounded-xl bg-white/8 hover:bg-[#F5C400]/20 border border-white/10 hover:border-[#F5C400]/30 flex items-center justify-center transition-all text-xs font-bold">
-                W
-              </a>
-              <a href="mailto:info@thetaxlink.com"
-                className="w-9 h-9 rounded-xl bg-white/8 hover:bg-[#F5C400]/20 border border-white/10 hover:border-[#F5C400]/30 flex items-center justify-center transition-all">
-                <Mail className="w-3.5 h-3.5" />
-              </a>
-              <a href="tel:+353851330866"
-                className="w-9 h-9 rounded-xl bg-white/8 hover:bg-[#F5C400]/20 border border-white/10 hover:border-[#F5C400]/30 flex items-center justify-center transition-all">
-                <Phone className="w-3.5 h-3.5" />
-              </a>
+            <div className="flex items-center gap-2.5">
+              {socials.map(({ label, href, icon: Icon, external }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  className="w-10 h-10 rounded-xl bg-[#1E3A6E]/[0.06] hover:bg-[#1E3A6E] border border-[#1E3A6E]/10 hover:border-[#1E3A6E] text-[#1E3A6E] hover:text-white flex items-center justify-center transition-all duration-200 hover:-translate-y-0.5"
+                >
+                  <Icon className="w-4 h-4" />
+                </a>
+              ))}
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
+            <h4 className="text-sm font-semibold text-[#1E3A6E] mb-5 flex items-center gap-2">
               <span className="w-4 h-0.5 bg-[#F5C400] rounded-full" />
               Our Services
             </h4>
             <ul className="space-y-2.5">
               {serviceLinks.map((link) => (
                 <li key={link.path}>
-                  <Link to={link.path} className="text-sm text-white/50 hover:text-[#F5C400] transition-colors duration-200">
+                  <Link to={link.path} className="text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
                     {link.name}
                   </Link>
                 </li>
@@ -78,14 +81,14 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
+            <h4 className="text-sm font-semibold text-[#1E3A6E] mb-5 flex items-center gap-2">
               <span className="w-4 h-0.5 bg-[#F5C400] rounded-full" />
               Quick Links
             </h4>
             <ul className="space-y-2.5">
               {quickLinks.map((link) => (
                 <li key={link.path}>
-                  <Link to={link.path} className="text-sm text-white/50 hover:text-[#F5C400] transition-colors duration-200">
+                  <Link to={link.path} className="text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
                     {link.name}
                   </Link>
                 </li>
@@ -95,29 +98,29 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
+            <h4 className="text-sm font-semibold text-[#1E3A6E] mb-5 flex items-center gap-2">
               <span className="w-4 h-0.5 bg-[#F5C400] rounded-full" />
               Get In Touch
             </h4>
             <ul className="space-y-3.5">
               <li>
-                <a href="mailto:info@thetaxlink.com" className="flex items-start gap-3 text-sm text-white/50 hover:text-[#F5C400] transition-colors duration-200">
-                  <Mail className="w-4 h-4 mt-0.5 shrink-0" />
+                <a href="mailto:info@thetaxlink.com" className="flex items-start gap-3 text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
+                  <Mail className="w-4 h-4 mt-0.5 shrink-0 text-[#1E3A6E]" />
                   info@thetaxlink.com
                 </a>
               </li>
               <li>
-                <a href="tel:+353851330866" className="flex items-start gap-3 text-sm text-white/50 hover:text-[#F5C400] transition-colors duration-200">
-                  <Phone className="w-4 h-4 mt-0.5 shrink-0" />
+                <a href="tel:+353851330866" className="flex items-start gap-3 text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
+                  <Phone className="w-4 h-4 mt-0.5 shrink-0 text-[#1E3A6E]" />
                   +353 85 133 0866
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-sm text-white/50">
-                <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+              <li className="flex items-start gap-3 text-sm text-[#4A4A4A]/70">
+                <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-[#1E3A6E]" />
                 D24 NRA0
               </li>
-              <li className="flex items-start gap-3 text-sm text-white/50">
-                <Clock className="w-4 h-4 mt-0.5 shrink-0" />
+              <li className="flex items-start gap-3 text-sm text-[#4A4A4A]/70">
+                <Clock className="w-4 h-4 mt-0.5 shrink-0 text-[#1E3A6E]" />
                 Mon – Fri: 9:00AM – 6:00PM
               </li>
             </ul>
@@ -125,14 +128,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/8 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-white/35">
+        <div className="border-t border-[#1E3A6E]/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-xs text-[#4A4A4A]/55">
             © {new Date().getFullYear()} The Tax Link. All rights reserved.
           </p>
-          <div className="flex items-center gap-5 text-xs text-white/35">
-            <Link to="/privacy" className="hover:text-[#F5C400] transition-colors">Privacy Policy</Link>
-            <span className="w-px h-3 bg-white/15" />
-            <Link to="/terms" className="hover:text-[#F5C400] transition-colors">Terms & Conditions</Link>
+          <div className="flex items-center gap-5 text-xs text-[#4A4A4A]/55">
+            <Link to="/privacy" className="hover:text-[#1E3A6E] transition-colors">Privacy Policy</Link>
+            <span className="w-px h-3 bg-[#1E3A6E]/15" />
+            <Link to="/terms" className="hover:text-[#1E3A6E] transition-colors">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>
