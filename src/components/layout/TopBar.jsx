@@ -9,13 +9,13 @@ export default function TopBar() {
             <Mail className="w-3 h-3" />
             info@thetaxlink.com
           </a>
-          <a href="tel:+353851330808" className="flex items-center gap-1.5 hover:text-[#F5C400] transition-colors duration-200">
+          <a href="tel:+353851330866" className="flex items-center gap-1.5 hover:text-[#F5C400] transition-colors duration-200">
             <Phone className="w-3 h-3" />
-            +353 85 133 0808
+            +353 85 133 0866
           </a>
         </div>
         <div className="flex items-center gap-4 text-white/50">
-          <a href="https://wa.me/353851330808" target="_blank" rel="noopener noreferrer" className="hover:text-[#F5C400] transition-colors duration-200 text-white/70">
+          <a href="https://wa.me/353851330866" target="_blank" rel="noopener noreferrer" className="hover:text-[#F5C400] transition-colors duration-200 text-white/70">
             WhatsApp Us
           </a>
           <span className="w-px h-3 bg-white/20" />

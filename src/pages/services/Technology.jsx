@@ -1,4 +1,4 @@
-import { Cpu, Shield, TrendingUp, Clock } from "lucide-react";
+import { Cpu, Globe2, Mail, Palette } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 export default function Technology() {
@@ -7,13 +7,27 @@ export default function Technology() {
       icon={Cpu}
       color="bg-[#F5C400] text-[#1E3A6E]"
       title="Technology"
-      subtitle="Modern technology solutions for smarter business operations."
+      subtitle="Digital presence and technology solutions for modern businesses."
       description={[
-        "We help businesses adopt tools and systems that reduce manual work and improve productivity.",
-        "Our technology support focuses on practical solutions that fit your workflow and growth plans."
+        "We help businesses strengthen their digital presence with practical technology services designed for growth in a competitive market.",
+        "Our technology support covers domain registration, professional website design and development, custom logo creation, and secure business email.",
+        "Whether you are starting from scratch or improving an existing online presence, we deliver scalable digital services aligned with your business goals.",
       ]}
-      features={['Business process automation', 'Software and cloud system advice', 'Accounting technology setup', 'Workflow improvement', 'Digital transformation support']}
-      benefits={[{ title: "Compliance Focused", desc: "Keep your business aligned with relevant rules and deadlines.", icon: Shield },{ title: "Growth Oriented", desc: "Practical support that helps your business move forward.", icon: TrendingUp },{ title: "Time Saving", desc: "Reduce admin workload and focus on what matters most.", icon: Clock }]}
+      features={[
+        "Domain name registration",
+        "Website design",
+        "Logo design",
+        "Website development",
+        "Business email address setup",
+        "Online presence improvements",
+        "Scalable digital solutions",
+        "Brand-aligned technology support",
+      ]}
+      benefits={[
+        { title: "Stronger Presence", desc: "Create a cleaner online foundation with domains, websites, and email.", icon: Globe2 },
+        { title: "Brand Support", desc: "Pair your website with logo and visual identity support.", icon: Palette },
+        { title: "Secure Email", desc: "Set up professional business email for trusted communication.", icon: Mail },
+      ]}
     />
   );
 }

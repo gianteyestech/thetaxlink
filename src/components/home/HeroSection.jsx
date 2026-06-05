@@ -6,7 +6,7 @@ import { ArrowRight, Shield, CheckCircle, Phone, Award, Users } from "lucide-rea
 const trustItems = [
   { icon: Shield, label: "Revenue Compliant" },
   { icon: Award, label: "Chartered Accountants" },
-  { icon: Users, label: "500+ Happy Clients" },
+  { icon: Users, label: "Tailored Business Support" },
 ];
 
 export default function HeroSection() {
@@ -41,10 +41,10 @@ export default function HeroSection() {
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-              <a href="tel:+353851330808">
+              <a href="tel:+353851330866">
                 <Button size="lg" variant="outline" className="rounded-full border-[#1E3A6E]/25 text-[#1E3A6E] hover:bg-[#1E3A6E]/5 px-8 text-base font-medium">
                   <Phone className="w-4 h-4 mr-2" />
-                  +353 85 133 0808
+                  +353 85 133 0866
                 </Button>
               </a>
             </div>
@@ -81,9 +81,9 @@ export default function HeroSection() {
               {/* Logo on image */}
               <div className="absolute bottom-7 left-7">
                 <img
-                  src="https://media.base44.com/images/public/6a083fbc37b39dfd4b4eba8a/47cd8a492_TTL_logo-2.png"
+                  src="/the-taxlink-logo.svg"
                   alt="The Tax Link"
-                  className="h-12 w-auto object-contain brightness-0 invert"
+                  className="h-12 w-auto object-contain"
                 />
                 <p className="text-white/60 text-xs mt-1">Chartered Accountants & Business Advisors</p>
               </div>
@@ -110,8 +110,8 @@ export default function HeroSection() {
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
             >
-              <p className="text-2xl font-bold text-[#1E3A6E]">15+</p>
-              <p className="text-xs font-semibold text-[#1E3A6E]/70">Years Experience</p>
+              <p className="text-2xl font-bold text-[#1E3A6E]">Tax</p>
+              <p className="text-xs font-semibold text-[#1E3A6E]/70">Planning Support</p>
             </motion.div>
 
             {/* Floating stat 3 */}
@@ -120,8 +120,8 @@ export default function HeroSection() {
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
             >
-              <p className="text-2xl font-bold text-[#1E3A6E]">500+</p>
-              <p className="text-xs text-gray-400">Happy Clients</p>
+              <p className="text-2xl font-bold text-[#1E3A6E]">IT</p>
+              <p className="text-xs text-gray-400">Digital Solutions</p>
             </motion.div>
           </motion.div>
         </div>

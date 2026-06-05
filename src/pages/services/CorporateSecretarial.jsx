@@ -1,4 +1,4 @@
-import { Building, Shield, TrendingUp, Clock } from "lucide-react";
+import { Building, FileCheck, Shield, Clock } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 export default function CorporateSecretarial() {
@@ -7,13 +7,28 @@ export default function CorporateSecretarial() {
       icon={Building}
       color="bg-[#F5C400] text-[#1E3A6E]"
       title="Corporate & Secretarial"
-      subtitle="Company compliance and governance support."
+      subtitle="Corporate governance, filings, and compliance handled professionally."
       description={[
-        "We help companies manage formation, CRO filings, annual returns, and corporate records.",
-        "Our corporate secretarial service keeps your business organised and compliant throughout the year."
+        "We provide corporate secretarial services for Irish businesses, with support across company secretarial work, compliance, and corporate governance.",
+        "As corporate regulation increases, we help businesses meet legal commitments and complete required tasks professionally and on time.",
+        "We also assist with company formation, Revenue paperwork, Companies Registration Office paperwork, and tax registration advice.",
       ]}
-      features={['Company formation support', 'Annual return filing', 'CRO compliance', 'Director and shareholder updates', 'Company record maintenance']}
-      benefits={[{ title: "Compliance Focused", desc: "Keep your business aligned with relevant rules and deadlines.", icon: Shield },{ title: "Growth Oriented", desc: "Practical support that helps your business move forward.", icon: TrendingUp },{ title: "Time Saving", desc: "Reduce admin workload and focus on what matters most.", icon: Clock }]}
+      features={[
+        "Business name registration",
+        "Company formation",
+        "CRO filings",
+        "Company annual returns",
+        "Sole trader registration",
+        "Business detail changes",
+        "Company restorations",
+        "Voluntary strike-offs",
+        "Late annual return solutions",
+      ]}
+      benefits={[
+        { title: "Governance Support", desc: "Keep company records, changes, and filings under control.", icon: FileCheck },
+        { title: "Compliance Confidence", desc: "Meet legal commitments as corporate regulation increases.", icon: Shield },
+        { title: "Fast Setup", desc: "Get company formation and registration work moving efficiently.", icon: Clock },
+      ]}
     />
   );
 }

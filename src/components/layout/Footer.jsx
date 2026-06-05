@@ -2,19 +2,19 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 const serviceLinks = [
-  { name: "Business Advice", path: "/services/business-advice" },
-  { name: "Accounts Preparation", path: "/services/accounts-preparation" },
-  { name: "Taxation", path: "/services/taxation" },
-  { name: "Bookkeeping", path: "/services/bookkeeping" },
-  { name: "Payroll", path: "/services/payroll" },
-  { name: "Corporate & Secretarial", path: "/services/corporate-secretarial" },
-  { name: "Trademark Registration", path: "/services/trademark-registration" },
+  { name: "Business Advice", path: "/business-advice" },
+  { name: "Accounts Preparation", path: "/accounts-preparation" },
+  { name: "Taxation", path: "/taxation" },
+  { name: "Bookkeeping", path: "/bookkeeping" },
+  { name: "Payroll", path: "/payroll" },
+  { name: "Corporate & Secretarial", path: "/corporate-secretarial" },
+  { name: "Trademark Registration", path: "/trademark-registration" },
 ];
 
 const quickLinks = [
   { name: "Home", path: "/" },
-  { name: "About Us", path: "/about" },
-  { name: "All Services", path: "/services" },
+  { name: "About Us", path: "/about-us" },
+  { name: "All Services", path: "/our-services" },
   { name: "Contact Us", path: "/contact" },
   { name: "Privacy Policy", path: "/privacy" },
   { name: "Terms & Conditions", path: "/terms" },
@@ -34,17 +34,17 @@ export default function Footer() {
             <div className="mb-5">
               <div className="inline-block bg-white rounded-xl px-3 py-2 shadow-sm">
                 <img
-                  src="https://media.base44.com/images/public/6a083fbc37b39dfd4b4eba8a/47cd8a492_TTL_logo-2.png"
+                  src="/the-taxlink-logo.svg"
                   alt="The Tax Link"
                   className="h-10 w-auto object-contain"
                 />
               </div>
             </div>
             <p className="text-white/55 text-sm leading-relaxed mb-6">
-              Expert accounting, tax, and business advisory services helping individuals and businesses thrive in Ireland.
+              Expert Accounting & Tax Solutions - helping you save more and grow faster.
             </p>
             <div className="flex items-center gap-2">
-              <a href="https://wa.me/353851330808" target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/353851330866" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-white/8 hover:bg-[#F5C400]/20 border border-white/10 hover:border-[#F5C400]/30 flex items-center justify-center transition-all text-xs font-bold">
                 W
               </a>
@@ -52,7 +52,7 @@ export default function Footer() {
                 className="w-9 h-9 rounded-xl bg-white/8 hover:bg-[#F5C400]/20 border border-white/10 hover:border-[#F5C400]/30 flex items-center justify-center transition-all">
                 <Mail className="w-3.5 h-3.5" />
               </a>
-              <a href="tel:+353851330808"
+              <a href="tel:+353851330866"
                 className="w-9 h-9 rounded-xl bg-white/8 hover:bg-[#F5C400]/20 border border-white/10 hover:border-[#F5C400]/30 flex items-center justify-center transition-all">
                 <Phone className="w-3.5 h-3.5" />
               </a>
@@ -107,14 +107,14 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+353851330808" className="flex items-start gap-3 text-sm text-white/50 hover:text-[#F5C400] transition-colors duration-200">
+                <a href="tel:+353851330866" className="flex items-start gap-3 text-sm text-white/50 hover:text-[#F5C400] transition-colors duration-200">
                   <Phone className="w-4 h-4 mt-0.5 shrink-0" />
-                  +353 85 133 0808
+                  +353 85 133 0866
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-white/50">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
-                Ireland
+                D24 NRA0
               </li>
               <li className="flex items-start gap-3 text-sm text-white/50">
                 <Clock className="w-4 h-4 mt-0.5 shrink-0" />

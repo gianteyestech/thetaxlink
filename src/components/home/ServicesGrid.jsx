@@ -4,16 +4,16 @@ import { ArrowRight, Lightbulb, FileText, Calculator, BookOpen, Wallet, Building
 import SectionHeading from "../shared/SectionHeading";
 
 const services = [
-  { icon: Lightbulb, title: "Business Advice", desc: "Strategic guidance to help your business thrive and grow confidently.", path: "/services/business-advice", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
-  { icon: FileText, title: "Accounts Preparation", desc: "Accurate financial statements prepared to the highest professional standards.", path: "/services/accounts-preparation", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
-  { icon: Calculator, title: "Taxation", desc: "Expert tax planning and compliance to minimise liabilities legally.", path: "/services/taxation", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
-  { icon: BookOpen, title: "Bookkeeping", desc: "Keep your financial records organised, accurate, and up to date.", path: "/services/bookkeeping", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
-  { icon: Wallet, title: "Payroll", desc: "Efficient payroll management ensuring timely and compliant payments.", path: "/services/payroll", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
-  { icon: Building, title: "Corporate & Secretarial", desc: "Company formation, governance, and regulatory compliance services.", path: "/services/corporate-secretarial", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
-  { icon: Award, title: "Trademark Registration", desc: "Protect your brand with professional trademark registration services.", path: "/services/trademark-registration", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
-  { icon: Cpu, title: "Technology", desc: "Modern technology solutions to streamline your business operations.", path: "/services/technology", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
-  { icon: Megaphone, title: "Marketing", desc: "Strategic marketing solutions to boost visibility and drive growth.", path: "/services/marketing", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
-  { icon: Globe, title: "Outsourcing", desc: "Flexible outsourcing solutions to scale your business efficiently.", path: "/services/outsourcing", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
+  { icon: Lightbulb, title: "Business Advice", desc: "Expert guidance for startups, expansion, operations, and structure.", path: "/business-advice", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
+  { icon: FileText, title: "Accounts Preparation", desc: "Clear accounts from your source documents and summaries.", path: "/accounts-preparation", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
+  { icon: Calculator, title: "Taxation", desc: "Irish tax obligations, planning, deadlines, and refunds.", path: "/taxation", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
+  { icon: BookOpen, title: "Bookkeeping", desc: "Transactions, reconciliation, reporting, payroll, and tax-ready books.", path: "/bookkeeping", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
+  { icon: Wallet, title: "Payroll", desc: "Payslips, Revenue filings, employee setup, and compliance support.", path: "/payroll", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
+  { icon: Building, title: "Corporate & Secretarial", desc: "Company formation, CRO filings, annual returns, and governance.", path: "/corporate-secretarial", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
+  { icon: Award, title: "Trademark Registration", desc: "Brand protection for names, logos, symbols, and trademarks.", path: "/trademark-registration", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
+  { icon: Cpu, title: "Technology", desc: "Domains, websites, logos, development, and business email.", path: "/technology", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
+  { icon: Megaphone, title: "Marketing", desc: "Marketing support to build awareness, trust, sales, and reputation.", path: "/marketing", iconBg: "bg-[#1E3A6E]/8", iconColor: "text-[#1E3A6E]" },
+  { icon: Globe, title: "Outsourcing", desc: "Outsourced accounting, payroll, tax, VAT, and back-office work.", path: "/outsourcing", iconBg: "bg-[#F5C400]/12", iconColor: "text-[#1E3A6E]" },
 ];
 
 export default function ServicesGrid() {
@@ -22,8 +22,8 @@ export default function ServicesGrid() {
       <div className="max-w-7xl mx-auto px-6">
         <SectionHeading
           badge="Our Services"
-          title="Comprehensive Business & Financial Services"
-          description="From accounting to marketing, we provide end-to-end solutions to simplify your business operations and accelerate growth."
+          title="Expert Financial Solutions"
+          description="From accounting and tax to technology, marketing, and outsourcing, we provide practical support for growing businesses."
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {services.map((service, i) => (

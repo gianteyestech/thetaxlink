@@ -1,4 +1,4 @@
-import { Globe, Shield, TrendingUp, Clock } from "lucide-react";
+import { Globe, Clock, Shield, TrendingUp } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 export default function Outsourcing() {
@@ -7,13 +7,29 @@ export default function Outsourcing() {
       icon={Globe}
       color="bg-[#F5C400] text-[#1E3A6E]"
       title="Outsourcing"
-      subtitle="Flexible outsourcing solutions to scale efficiently."
+      subtitle="Strategic outsourcing to streamline operations and reduce costs."
       description={[
-        "We provide outsourcing support for business functions where expert help can save time and cost.",
-        "Our service helps you focus on growth while trusted professionals handle operational work."
+        "Outsourcing helps businesses reduce costs, access specialised expertise, and scale operations without carrying every task in-house.",
+        "We provide cost-effective, high-quality outsourcing support so you can focus on the work that matters most.",
+        "Our outsourcing services cover accounting, payroll, tax, bookkeeping, reconciliation, annual returns, and company secretarial support.",
       ]}
-      features={['Accounting outsourcing', 'Bookkeeping outsourcing', 'Payroll outsourcing', 'Back-office support', 'Scalable business support']}
-      benefits={[{ title: "Compliance Focused", desc: "Keep your business aligned with relevant rules and deadlines.", icon: Shield },{ title: "Growth Oriented", desc: "Practical support that helps your business move forward.", icon: TrendingUp },{ title: "Time Saving", desc: "Reduce admin workload and focus on what matters most.", icon: Clock }]}
+      features={[
+        "VAT returns preparation",
+        "Payroll processing",
+        "Personal tax returns",
+        "Bookkeeping services",
+        "Bank and credit card reconciliation",
+        "Company year-end accounts",
+        "Corporation tax returns",
+        "Annual return submissions",
+        "Company secretary and support",
+        "Daily or weekly accounting entries",
+      ]}
+      benefits={[
+        { title: "Lower Admin Load", desc: "Move routine finance and compliance tasks to trusted support.", icon: Clock },
+        { title: "Specialist Access", desc: "Use skilled support for tax, payroll, accounts, and secretarial work.", icon: Shield },
+        { title: "Room to Grow", desc: "Free your team to focus on growth, service, and operations.", icon: TrendingUp },
+      ]}
     />
   );
 }

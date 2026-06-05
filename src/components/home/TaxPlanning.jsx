@@ -34,7 +34,7 @@ export default function TaxPlanning() {
             <p className="text-[#4A4A4A]/70 leading-relaxed mb-8 text-base">
               Whether you're a sole trader, a partnership, or a limited company, we craft a personalised tax strategy designed to protect your wealth and support your growth.
             </p>
-            <Link to="/services/taxation">
+            <Link to="/taxation">
               <Button className="rounded-full bg-[#1E3A6E] hover:bg-[#162d57] text-white px-7 h-11 font-medium shadow-navy/25 shadow-md">
                 Explore Tax Services <ArrowRight className="w-4 h-4 ml-2" />
               </Button>

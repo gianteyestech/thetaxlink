@@ -4,9 +4,9 @@ import ContactForm from "../components/shared/ContactForm";
 
 const contactInfo = [
   { icon: Mail, label: "Email Us", value: "info@thetaxlink.com", href: "mailto:info@thetaxlink.com" },
-  { icon: Phone, label: "Call Us", value: "+353 85 133 0808", href: "tel:+353851330808" },
-  { icon: MessageCircle, label: "WhatsApp", value: "Chat with us on WhatsApp", href: "https://wa.me/353851330808" },
-  { icon: MapPin, label: "Location", value: "Ireland", href: null },
+  { icon: Phone, label: "Call Us", value: "+353 85 133 0866", href: "tel:+353851330866" },
+  { icon: MessageCircle, label: "WhatsApp", value: "Chat with us on WhatsApp", href: "https://wa.me/353851330866" },
+  { icon: MapPin, label: "Location", value: "D24 NRA0", href: null },
   { icon: Clock, label: "Business Hours", value: "Mon – Fri: 9:00 AM – 6:00 PM", href: null },
 ];
 
@@ -84,7 +84,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="rounded-2xl overflow-hidden h-[380px] border border-gray-200 shadow-card">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2381838.678236!2d-9.0!3d53.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48669a0d42560341%3A0x4e1e3e17e2d7c30f!2sIreland!5e0!3m2!1sen!2s!4v1"
+              src="https://www.google.com/maps?q=D24%20NRA0&output=embed"
               width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
               referrerPolicy="no-referrer-when-downgrade" title="The Tax Link Location"
             />

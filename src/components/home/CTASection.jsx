@@ -37,9 +37,9 @@ export default function CTASection() {
                   Book Free Consultation <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-              <a href="tel:+353851330808">
+              <a href="tel:+353851330866">
                 <Button size="lg" variant="outline" className="rounded-full border-white/20 text-white hover:bg-white/8 px-9 h-13 text-base font-medium transition-all">
-                  <Phone className="w-4 h-4 mr-2" /> +353 85 133 0808
+                  <Phone className="w-4 h-4 mr-2" /> +353 85 133 0866
                 </Button>
               </a>
             </div>

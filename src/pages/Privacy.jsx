@@ -8,7 +8,7 @@ const sections = [
   { title: "5. Data Sharing", text: "We do not sell, trade, or share your personal data with third parties except where necessary to provide our services, comply with legal obligations, or with your explicit consent." },
   { title: "6. Your Rights", text: "Under GDPR, you have the right to access, rectify, erase, restrict processing, data portability, and object to the processing of your personal data. To exercise these rights, please contact us at info@thetaxlink.com." },
   { title: "7. Cookies", text: "Our website may use cookies to enhance your browsing experience. You can manage your cookie preferences through your browser settings." },
-  { title: "8. Contact Us", text: "For any questions regarding this privacy policy, please contact us at info@thetaxlink.com or call +353 85 133 0808." },
+  { title: "8. Contact Us", text: "For any questions regarding this privacy policy, please contact us at info@thetaxlink.com or call +353 85 133 0866." },
 ];
 
 export default function Privacy() {

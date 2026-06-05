@@ -1,12 +1,11 @@
 import { motion } from "framer-motion";
-import AnimatedCounter from "../shared/AnimatedCounter";
-import { Calendar, Users, Briefcase, Building2 } from "lucide-react";
+import { BadgeCheck, Briefcase, FileCheck, Laptop } from "lucide-react";
 
 const stats = [
-  { icon: Calendar, value: 15, suffix: "+", label: "Years of Experience" },
-  { icon: Users, value: 500, suffix: "+", label: "Happy Clients" },
-  { icon: Briefcase, value: 10, suffix: "+", label: "Services Offered" },
-  { icon: Building2, value: 300, suffix: "+", label: "Businesses Supported" },
+  { icon: BadgeCheck, value: "CA", label: "Ireland Qualified" },
+  { icon: Briefcase, value: "Tax", label: "Planning & Filing" },
+  { icon: Laptop, value: "IT", label: "Digital Solutions" },
+  { icon: FileCheck, value: "Audit", label: "Partner Support" },
 ];
 
 export default function StatsSection() {
@@ -31,8 +30,8 @@ export default function StatsSection() {
               <div className="w-12 h-12 mx-auto rounded-2xl bg-white/8 border border-white/10 flex items-center justify-center mb-4 group-hover:bg-[#F5C400]/15 group-hover:border-[#F5C400]/30 transition-all">
                 <stat.icon className="w-5 h-5 text-[#F5C400]" />
               </div>
-              <p className="text-3xl md:text-4xl font-bold text-white mb-1.5 tracking-tight">
-                <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+              <p className="text-2xl md:text-3xl font-bold text-white mb-1.5 tracking-tight">
+                {stat.value}
               </p>
               <p className="text-sm text-white/50">{stat.label}</p>
             </motion.div>

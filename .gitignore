@@ -9,5 +9,10 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# Local dev server logs (Codex/Vite)
+codex-vite.*.log
+*.out.log
+*.err.log
+
 .DS_Store
 Thumbs.db

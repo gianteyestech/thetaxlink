@@ -1,4 +1,4 @@
-import { Lightbulb, Shield, TrendingUp, Clock } from "lucide-react";
+import { Lightbulb, Shield, TrendingUp, Users } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 export default function BusinessAdvice() {
@@ -7,13 +7,27 @@ export default function BusinessAdvice() {
       icon={Lightbulb}
       color="bg-[#F5C400] text-[#1E3A6E]"
       title="Business Advice"
-      subtitle="Strategic guidance to help your business grow with confidence."
+      subtitle="Tailored business advice for growth, structure, and success."
       description={[
-        "We provide practical business advice for startups, sole traders, SMEs, and established companies across Ireland.",
-        "Our advisory approach focuses on better decisions, stronger compliance, improved cash flow, and long-term growth."
+        "We provide expert business advice for people launching a startup, expanding an existing company, or improving day-to-day operations.",
+        "Our support covers business formation choices, practical recommendations, grant and finance awareness, and the key differences between trading as a limited company, partnership, sole trader, or individual.",
+        "We help clients understand liability, legal structure, continuity, corporation tax advantages, and name protection so they can make confident business decisions.",
       ]}
-      features={['Business planning and growth strategy', 'Cash flow and profitability review', 'Startup and company structure advice', 'Management reporting support', 'Financial performance improvement']}
-      benefits={[{ title: "Compliance Focused", desc: "Keep your business aligned with relevant rules and deadlines.", icon: Shield },{ title: "Growth Oriented", desc: "Practical support that helps your business move forward.", icon: TrendingUp },{ title: "Time Saving", desc: "Reduce admin workload and focus on what matters most.", icon: Clock }]}
+      features={[
+        "Limited company by shares guidance",
+        "Partnership setup considerations",
+        "Sole trader registration advice",
+        "Individual business advice",
+        "Grant and financial support guidance",
+        "Company structure and liability review",
+        "Corporation tax and business continuity considerations",
+        "Business name protection guidance",
+      ]}
+      benefits={[
+        { title: "Better Structure", desc: "Choose a business setup that fits your liability, tax, and growth needs.", icon: Shield },
+        { title: "Growth Ready", desc: "Get practical recommendations for launching or expanding with confidence.", icon: TrendingUp },
+        { title: "Informed Decisions", desc: "Understand the steps, obligations, and options before you commit.", icon: Users },
+      ]}
     />
   );
 }

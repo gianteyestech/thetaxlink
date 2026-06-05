@@ -30,7 +30,19 @@ export default function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
+            <Route path="about-us" element={<About />} />
             <Route path="services" element={<Services />} />
+            <Route path="our-services" element={<Services />} />
+            <Route path="business-advice" element={<BusinessAdvice />} />
+            <Route path="accounts-preparation" element={<AccountsPreparation />} />
+            <Route path="taxation" element={<Taxation />} />
+            <Route path="bookkeeping" element={<Bookkeeping />} />
+            <Route path="payroll" element={<Payroll />} />
+            <Route path="corporate-secretarial" element={<CorporateSecretarial />} />
+            <Route path="trademark-registration" element={<TrademarkRegistration />} />
+            <Route path="technology" element={<Technology />} />
+            <Route path="marketing" element={<Marketing />} />
+            <Route path="outsourcing" element={<Outsourcing />} />
             <Route path="services/business-advice" element={<BusinessAdvice />} />
             <Route path="services/accounts-preparation" element={<AccountsPreparation />} />
             <Route path="services/taxation" element={<Taxation />} />

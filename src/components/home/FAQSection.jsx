@@ -7,7 +7,7 @@ const faqs = [
   { q: "Do you work with individuals or only businesses?", a: "We work with both individuals and businesses of all sizes, from sole traders and freelancers to large corporations and multinationals." },
   { q: "How much does a consultation cost?", a: "Your initial consultation is completely free. We'll discuss your needs and provide a transparent quote with no hidden fees." },
   { q: "Are you based in Ireland?", a: "Yes, we are proudly based in Ireland and serve clients throughout the country. We also support international clients doing business in Ireland." },
-  { q: "How do I get started?", a: "Simply book a free consultation through our website or call us at +353 85 133 0808. We'll take it from there!" },
+  { q: "How do I get started?", a: "Simply book a free consultation through our website or call us at +353 85 133 0866. We'll take it from there!" },
   { q: "Can you help with Revenue audits?", a: "Absolutely. Our team has extensive experience in managing Revenue audits and can guide you through the entire process with confidence." },
 ];
 

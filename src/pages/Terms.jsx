@@ -9,7 +9,7 @@ const sections = [
   { title: "6. Limitation of Liability", text: "While we exercise due care and skill in providing our services, The Tax Link shall not be liable for any indirect, consequential, or special damages arising from the use of our services, except in cases of negligence." },
   { title: "7. Intellectual Property", text: "All content on this website, including text, graphics, and logos, is the property of The Tax Link and is protected by intellectual property laws. You may not reproduce or distribute any content without our written permission." },
   { title: "8. Governing Law", text: "These terms are governed by and construed in accordance with the laws of Ireland. Any disputes shall be subject to the exclusive jurisdiction of the Irish courts." },
-  { title: "9. Contact", text: "For any questions about these terms, please contact us at info@thetaxlink.com or call +353 85 133 0808." },
+  { title: "9. Contact", text: "For any questions about these terms, please contact us at info@thetaxlink.com or call +353 85 133 0866." },
 ];
 
 export default function Terms() {

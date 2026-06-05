@@ -1,4 +1,4 @@
-import { BookOpen, Shield, TrendingUp, Clock } from "lucide-react";
+import { BookOpen, BarChart3, Clock } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 export default function Bookkeeping() {
@@ -7,13 +7,27 @@ export default function Bookkeeping() {
       icon={BookOpen}
       color="bg-[#F5C400] text-[#1E3A6E]"
       title="Bookkeeping"
-      subtitle="Organised financial records, accurate reporting, and less stress."
+      subtitle="Reliable and accurate bookkeeping services for business growth."
       description={[
-        "We keep your books up to date so you always know where your business stands.",
-        "Our bookkeeping service is designed to save time, reduce errors, and support smooth accounting at year end."
+        "Bookkeeping is the backbone of a successful business because it records and organises financial transactions and shows the health of the company.",
+        "At The Tax Link, we provide bookkeeping solutions tailored to your business, whether you are a startup or an established company.",
+        "We keep financial records organised, tax-ready, and useful for management decisions so you can focus on growing the business.",
       ]}
-      features={['Transaction recording', 'Bank reconciliation', 'Supplier and customer records', 'Monthly bookkeeping reports', 'Cloud bookkeeping support']}
-      benefits={[{ title: "Compliance Focused", desc: "Keep your business aligned with relevant rules and deadlines.", icon: Shield },{ title: "Growth Oriented", desc: "Practical support that helps your business move forward.", icon: TrendingUp },{ title: "Time Saving", desc: "Reduce admin workload and focus on what matters most.", icon: Clock }]}
+      features={[
+        "Recording financial transactions",
+        "Accounts payable and receivable management",
+        "Bank reconciliation",
+        "Payroll processing",
+        "Balance sheet and income statement reporting",
+        "Cash flow summaries",
+        "Tax preparation and filing support",
+        "Personalised bookkeeping service",
+      ]}
+      benefits={[
+        { title: "Accurate Records", desc: "Keep income, expenses, sales, invoices, and payments organised.", icon: BookOpen },
+        { title: "Clear Reporting", desc: "Use concise reports to understand performance and cash flow.", icon: BarChart3 },
+        { title: "Less Admin", desc: "Free up time by letting specialists handle routine bookkeeping work.", icon: Clock },
+      ]}
     />
   );
 }

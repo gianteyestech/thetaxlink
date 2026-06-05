@@ -1,4 +1,4 @@
-import { FileText, Shield, TrendingUp, Clock } from "lucide-react";
+import { FileText, BarChart3, Shield, TrendingUp } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 export default function AccountsPreparation() {
@@ -7,13 +7,27 @@ export default function AccountsPreparation() {
       icon={FileText}
       color="bg-[#F5C400] text-[#1E3A6E]"
       title="Accounts Preparation"
-      subtitle="Accurate accounts prepared to professional standards."
+      subtitle="Clear, compliant financial records for better business decisions."
       description={[
-        "We prepare annual accounts and financial statements that give you a clear view of your business performance.",
-        "Our team helps you meet your compliance obligations while providing insights that support better decisions."
+        "Businesses must keep adequate books and records that show a true picture of their financial position. We prepare accounts from the source documents and summaries you provide.",
+        "Our team translates financial statements into a simple format, helping you understand business performance and identify what needs attention.",
+        "We support account preparation across sectors including construction, charities, cleaning and gardening, car servicing, education, heating and plumbing, mobile shops, professional services, property management, retail, cafes, restaurants, and taxi businesses.",
       ]}
-      features={['Annual financial statements', 'Sole trader and company accounts', 'CRO and Revenue-ready reporting', 'Management accounts', 'Year-end review and adjustments']}
-      benefits={[{ title: "Compliance Focused", desc: "Keep your business aligned with relevant rules and deadlines.", icon: Shield },{ title: "Growth Oriented", desc: "Practical support that helps your business move forward.", icon: TrendingUp },{ title: "Time Saving", desc: "Reduce admin workload and focus on what matters most.", icon: Clock }]}
+      features={[
+        "Financial statements under FRS 102, IFRS, US GAAP, and LUX GAAP",
+        "Sole trader account preparation",
+        "Management accounts",
+        "Forecasts and cash flow projections",
+        "Year-end source document review",
+        "Simple explanation of financial statements",
+        "Sector-aware account preparation",
+        "Timely, accurate accounts for compliance",
+      ]}
+      benefits={[
+        { title: "Clear Records", desc: "See a more accurate picture of your business finances.", icon: BarChart3 },
+        { title: "Compliance Support", desc: "Prepare accounts properly and on time for required authorities.", icon: Shield },
+        { title: "Better Decisions", desc: "Use understandable numbers to improve performance and planning.", icon: TrendingUp },
+      ]}
     />
   );
 }

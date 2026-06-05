@@ -1,4 +1,4 @@
-import { Wallet, Shield, TrendingUp, Clock } from "lucide-react";
+import { Wallet, FileCheck, Shield, Clock } from "lucide-react";
 import ServicePageTemplate from "@/components/shared/ServicePageTemplate";
 
 export default function Payroll() {
@@ -7,13 +7,27 @@ export default function Payroll() {
       icon={Wallet}
       color="bg-[#F5C400] text-[#1E3A6E]"
       title="Payroll"
-      subtitle="Reliable payroll management for Irish businesses."
+      subtitle="Effortless payroll management for your business."
       description={[
-        "We manage payroll accurately and on time so your employees are paid correctly and your Revenue obligations are met.",
-        "Our payroll process is confidential, compliant, and designed for businesses of all sizes."
+        "We simplify payroll with reliable processing, accurate wage calculations, Revenue filings, and compliance management.",
+        "Our payroll support is designed to reduce administration, minimise errors, and ensure employees are paid correctly and on time.",
+        "The computerised payroll system can produce weekly, bimonthly, or monthly payslips that can be emailed or printed.",
       ]}
-      features={['Weekly and monthly payroll', 'PAYE modernisation compliance', 'Payslips and payroll reports', 'Employee starter and leaver support', 'Revenue payroll submissions']}
-      benefits={[{ title: "Compliance Focused", desc: "Keep your business aligned with relevant rules and deadlines.", icon: Shield },{ title: "Growth Oriented", desc: "Practical support that helps your business move forward.", icon: TrendingUp },{ title: "Time Saving", desc: "Reduce admin workload and focus on what matters most.", icon: Clock }]}
+      features={[
+        "Register new employees with Revenue",
+        "Generate weekly, bimonthly, or monthly payslips",
+        "File monthly and annual payroll returns with Revenue",
+        "Obtain employee tax deduction certificates",
+        "Maintain compliance with regulatory updates",
+        "Advice on employment contracts",
+        "Ad hoc advice for employers and employees",
+        "Scalable payroll support for startups and established companies",
+      ]}
+      benefits={[
+        { title: "Accurate Payslips", desc: "Produce timely payslips and payroll records for your team.", icon: FileCheck },
+        { title: "Revenue Compliance", desc: "Keep payroll filings and employee registrations aligned with requirements.", icon: Shield },
+        { title: "Time Saved", desc: "Reduce manual payroll administration and avoid avoidable errors.", icon: Clock },
+      ]}
     />
   );
 }

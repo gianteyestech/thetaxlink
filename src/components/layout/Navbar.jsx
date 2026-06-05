@@ -5,16 +5,16 @@ import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const services = [
-  { name: "Business Advice", path: "/services/business-advice" },
-  { name: "Accounts Preparation", path: "/services/accounts-preparation" },
-  { name: "Taxation", path: "/services/taxation" },
-  { name: "Bookkeeping", path: "/services/bookkeeping" },
-  { name: "Payroll", path: "/services/payroll" },
-  { name: "Corporate & Secretarial", path: "/services/corporate-secretarial" },
-  { name: "Trademark Registration", path: "/services/trademark-registration" },
-  { name: "Technology", path: "/services/technology" },
-  { name: "Marketing", path: "/services/marketing" },
-  { name: "Outsourcing", path: "/services/outsourcing" },
+  { name: "Business Advice", path: "/business-advice" },
+  { name: "Accounts Preparation", path: "/accounts-preparation" },
+  { name: "Taxation", path: "/taxation" },
+  { name: "Bookkeeping", path: "/bookkeeping" },
+  { name: "Payroll", path: "/payroll" },
+  { name: "Corporate & Secretarial", path: "/corporate-secretarial" },
+  { name: "Trademark Registration", path: "/trademark-registration" },
+  { name: "Technology", path: "/technology" },
+  { name: "Marketing", path: "/marketing" },
+  { name: "Outsourcing", path: "/outsourcing" },
 ];
 
 export default function Navbar() {
@@ -40,7 +40,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center shrink-0">
           <img
-            src="https://media.base44.com/images/public/6a083fbc37b39dfd4b4eba8a/47cd8a492_TTL_logo-2.png"
+            src="/the-taxlink-logo.svg"
             alt="The Tax Link"
             className="h-16 w-auto object-contain drop-shadow-sm"
           />
@@ -49,7 +49,7 @@ export default function Navbar() {
         {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-7">
           <Link to="/" className={navLinkClass}>Home</Link>
-          <Link to="/about" className={navLinkClass}>About</Link>
+          <Link to="/about-us" className={navLinkClass}>About</Link>
 
           <div className="relative group">
             <button className={`${navLinkClass} flex items-center gap-1`}>
@@ -68,7 +68,7 @@ export default function Navbar() {
                   </Link>
                 ))}
                 <div className="border-t border-gray-100 mt-1 pt-1">
-                  <Link to="/services" className="flex items-center justify-center gap-1 px-3 py-2.5 text-sm font-semibold text-[#F5C400] hover:bg-[#F5C400]/8 rounded-xl transition-all duration-150">
+                  <Link to="/our-services" className="flex items-center justify-center gap-1 px-3 py-2.5 text-sm font-semibold text-[#F5C400] hover:bg-[#F5C400]/8 rounded-xl transition-all duration-150">
                     View All Services →
                   </Link>
                 </div>
@@ -81,9 +81,9 @@ export default function Navbar() {
 
         {/* CTA */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="tel:+353851330808" className="flex items-center gap-1.5 text-sm font-medium text-[#1E3A6E]/70 hover:text-[#1E3A6E] transition-colors">
+          <a href="tel:+353851330866" className="flex items-center gap-1.5 text-sm font-medium text-[#1E3A6E]/70 hover:text-[#1E3A6E] transition-colors">
             <Phone className="w-3.5 h-3.5" />
-            +353 85 133 0808
+            +353 85 133 0866
           </a>
           <Link to="/contact">
             <Button size="sm" className="rounded-full bg-[#1E3A6E] hover:bg-[#162d57] text-white px-5 h-9 text-sm font-medium shadow-navy/30 shadow-md transition-all hover:shadow-navy/50">
@@ -113,7 +113,7 @@ export default function Navbar() {
           >
             <div className="px-6 py-5 space-y-1">
               <Link to="/" className="block py-2.5 text-sm font-medium text-[#1E3A6E]">Home</Link>
-              <Link to="/about" className="block py-2.5 text-sm font-medium text-[#1E3A6E]">About</Link>
+              <Link to="/about-us" className="block py-2.5 text-sm font-medium text-[#1E3A6E]">About</Link>
               <button onClick={() => setServicesOpen(!servicesOpen)} className="flex items-center justify-between w-full py-2.5 text-sm font-medium text-[#1E3A6E]">
                 Services
                 <ChevronDown className={`w-4 h-4 transition-transform ${servicesOpen ? "rotate-180" : ""}`} />
