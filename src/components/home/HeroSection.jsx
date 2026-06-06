@@ -69,7 +69,7 @@ export default function HeroSection() {
             {/* Main image */}
             <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(14,31,61,0.2)]">
               <img
-                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=90&auto=format&fit=crop"
+                src="/hero.jpg"
                 alt="Professional accountant at work"
                 className="w-full h-[480px] object-cover"
               />

@@ -45,7 +45,7 @@ export default function TaxPlanning() {
             {/* Background image with overlay */}
             <div className="rounded-3xl overflow-hidden shadow-navy mb-5 hidden lg:block">
               <img
-                src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=900&q=90&auto=format&fit=crop"
+                src="/taxplanning.jpg"
                 alt="Tax planning documents"
                 className="w-full h-52 object-cover"
               />

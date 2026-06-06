@@ -98,7 +98,7 @@ export default function About() {
             </div>
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
               <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-navy relative">
-                <img src="https://thetaxlink.com/wp-content/uploads/elementor/thumbs/view-woman-working-as-economist-min-r35ilvcevcy73wuu076cwb3jtrxpzj5cf73t5z8wcy.jpg" alt="Accounting services" className="w-full h-full object-cover" />
+                <img src="/about.jpg" alt="Accounting services" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0E1F3D]/80 via-[#0E1F3D]/20 to-transparent" />
                 <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#F5C400] via-[#FFD633] to-[#F5C400]" />
                 <div className="absolute bottom-7 left-7 right-7">

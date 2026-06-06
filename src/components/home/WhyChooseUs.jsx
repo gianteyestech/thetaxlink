@@ -19,7 +19,7 @@ export default function WhyChooseUs() {
           {/* Image */}
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative rounded-3xl overflow-hidden shadow-navy hidden lg:block">
             <img
-              src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&q=90&auto=format&fit=crop"
+              src="/whychoose.jpg"
               alt="Professional business meeting"
               className="w-full h-[500px] object-cover"
             />

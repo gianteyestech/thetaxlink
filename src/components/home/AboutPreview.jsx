@@ -25,7 +25,7 @@ export default function AboutPreview() {
             <div className="relative">
               <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-navy">
                 <img
-                  src="https://thetaxlink.com/wp-content/uploads/elementor/thumbs/view-woman-working-as-economist-min-r35ilvcevcy73wuu076cwb3jtrxpzj5cf73t5z8wcy.jpg"
+                  src="/about.jpg"
                   alt="Accounting services"
                   className="w-full h-full object-cover"
                 />
