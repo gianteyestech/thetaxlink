@@ -28,7 +28,7 @@ export default function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
       <ContentProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
         <Routes>
           <Route path="/admin/*" element={<AdminApp />} />
           <Route path="/" element={<Layout />}>

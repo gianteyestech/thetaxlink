@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useDoc } from "@/content/ContentContext";
+import { asset } from "@/lib/asset";
 
 export default function Navbar() {
   const { company, nav, serviceMenu } = useDoc("global");
@@ -29,7 +30,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center shrink-0">
           <img
-            src={company.logo}
+            src={asset(company.logo)}
             alt={company.name}
             className="h-[72px] w-auto object-contain drop-shadow-sm"
           />

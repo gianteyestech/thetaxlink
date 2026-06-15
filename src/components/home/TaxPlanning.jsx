@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Icon } from "@/content/icons";
 import { useDoc } from "@/content/ContentContext";
+import { asset } from "@/lib/asset";
 
 export default function TaxPlanning() {
   const { taxPlanning } = useDoc("home");
@@ -42,7 +43,7 @@ export default function TaxPlanning() {
             {/* Background image with overlay */}
             <div className="rounded-3xl overflow-hidden shadow-navy mb-5 hidden lg:block">
               <img
-                src={taxPlanning.image}
+                src={asset(taxPlanning.image)}
                 alt={taxPlanning.imageAlt}
                 className="w-full h-52 object-cover"
               />

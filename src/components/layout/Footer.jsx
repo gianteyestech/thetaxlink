@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 import { useDoc } from "@/content/ContentContext";
+import { asset } from "@/lib/asset";
 
 export default function Footer() {
   const { company, footer } = useDoc("global");
@@ -23,7 +24,7 @@ export default function Footer() {
           <div>
             <Link to="/" className="inline-block mb-6 transition-transform duration-300 hover:scale-[1.02]">
               <img
-                src={company.logo}
+                src={asset(company.logo)}
                 alt={company.name}
                 className="h-20 w-auto object-contain"
               />

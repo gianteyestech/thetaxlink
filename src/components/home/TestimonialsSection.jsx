@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import SectionHeading from "../shared/SectionHeading";
 import { useDoc } from "@/content/ContentContext";
+import { asset } from "@/lib/asset";
 
 export default function TestimonialsSection() {
   const { testimonials } = useDoc("home");
@@ -38,7 +39,7 @@ export default function TestimonialsSection() {
               </div>
               <p className="text-sm text-white/70 leading-relaxed mb-6 italic">"{t.text}"</p>
               <div className="flex items-center gap-3 pt-5 border-t border-white/10">
-                <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full object-cover border-2 border-[#F5C400]/30" />
+                <img src={asset(t.avatar)} alt={t.name} className="w-10 h-10 rounded-full object-cover border-2 border-[#F5C400]/30" />
                 <div>
                   <p className="font-semibold text-sm text-white">{t.name}</p>
                   <p className="text-xs text-white/45">{t.role}</p>

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChevronDown, ChevronRight, Plus, Trash2, ArrowUp, ArrowDown } from "lucide-react";
 import { Icon, ICON_NAMES } from "@/content/icons";
 import { labelFor, isIconField, isImageField, isTextareaField } from "@/content/schema";
+import { asset } from "@/lib/asset";
 
 // Build an "empty" value with the same shape as a sample, so adding new list
 // items keeps the structure the public components expect.
@@ -77,7 +78,7 @@ function ImageField({ value, onChange }) {
   return (
     <div className="flex items-center gap-3">
       {isImg && (
-        <img src={value} alt="" className="h-12 w-12 shrink-0 rounded-lg border border-gray-200 object-cover" />
+        <img src={asset(value)} alt="" className="h-12 w-12 shrink-0 rounded-lg border border-gray-200 object-cover" />
       )}
       <input
         className={inputCls}

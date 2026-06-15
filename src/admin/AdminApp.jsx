@@ -123,7 +123,7 @@ export default function AdminApp() {
         </nav>
         <div className="border-t border-gray-100 p-3">
           <a
-            href="/"
+            href={import.meta.env.BASE_URL}
             target="_blank"
             rel="noreferrer"
             className="mb-1 flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-[#1E3A6E]/80 hover:bg-[#1E3A6E]/5"

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle, Phone, Award } from "lucide-react";
 import { useDoc } from "@/content/ContentContext";
+import { asset } from "@/lib/asset";
 
 export default function HeroSection() {
   const { hero } = useDoc("home");
@@ -67,7 +68,7 @@ export default function HeroSection() {
             {/* Main image */}
             <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(14,31,61,0.2)]">
               <img
-                src={hero.image}
+                src={asset(hero.image)}
                 alt={hero.imageAlt}
                 className="w-full h-[480px] object-cover"
               />
@@ -79,7 +80,7 @@ export default function HeroSection() {
               {/* Logo on image */}
               <div className="absolute bottom-7 left-7">
                 <img
-                  src={company.logo}
+                  src={asset(company.logo)}
                   alt={company.name}
                   className="h-12 w-auto object-contain"
                 />

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import SectionHeading from "../shared/SectionHeading";
 import { useDoc } from "@/content/ContentContext";
+import { asset } from "@/lib/asset";
 
 export default function AboutPreview() {
   const { aboutPreview } = useDoc("home");
@@ -22,7 +23,7 @@ export default function AboutPreview() {
             <div className="relative">
               <div className="w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-navy">
                 <img
-                  src={aboutPreview.image}
+                  src={asset(aboutPreview.image)}
                   alt={aboutPreview.imageAlt}
                   className="w-full h-full object-cover"
                 />
@@ -30,7 +31,7 @@ export default function AboutPreview() {
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F5C400] via-[#FFD633] to-[#F5C400]" />
                 <div className="absolute bottom-6 left-6">
                   <span className="inline-block rounded-xl bg-white px-3 py-2 shadow-sm">
-                    <img src={company.logo} alt={company.name} className="h-8 w-auto" />
+                    <img src={asset(company.logo)} alt={company.name} className="h-8 w-auto" />
                   </span>
                 </div>
               </div>

@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Configure GitHub Pages deploy with SPA routing and base path' -m '- Add GitHub Actions workflow to build and deploy to Pages on push *)"
+    ]
+  }
+}

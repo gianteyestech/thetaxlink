@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import SectionHeading from "../shared/SectionHeading";
 import { Icon } from "@/content/icons";
 import { useDoc } from "@/content/ContentContext";
+import { asset } from "@/lib/asset";
 
 export default function WhyChooseUs() {
   const { whyChooseUs } = useDoc("home");
@@ -13,7 +14,7 @@ export default function WhyChooseUs() {
           {/* Image */}
           <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="relative rounded-3xl overflow-hidden shadow-navy hidden lg:block">
             <img
-              src={whyChooseUs.image}
+              src={asset(whyChooseUs.image)}
               alt={whyChooseUs.imageAlt}
               className="w-full h-[500px] object-cover"
             />
