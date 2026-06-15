@@ -1,16 +1,11 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
 import ContactForm from "../components/shared/ContactForm";
-
-const contactInfo = [
-  { icon: Mail, label: "Email Us", value: "info@thetaxlink.com", href: "mailto:info@thetaxlink.com" },
-  { icon: Phone, label: "Call Us", value: "+353 85 133 0866", href: "tel:+353851330866" },
-  { icon: MessageCircle, label: "WhatsApp", value: "Chat with us on WhatsApp", href: "https://wa.me/353851330866" },
-  { icon: MapPin, label: "Location", value: "D24 NRA0", href: null },
-  { icon: Clock, label: "Business Hours", value: "Mon – Fri: 9:00 AM – 6:00 PM", href: null },
-];
+import { Icon } from "@/content/icons";
+import { useDoc } from "@/content/ContentContext";
 
 export default function Contact() {
+  const { hero, infoHeading, infoIntro, info, form, mapEmbed } = useDoc("contact");
+
   return (
     <>
       {/* Hero */}
@@ -21,13 +16,13 @@ export default function Contact() {
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="max-w-2xl mx-auto text-center">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest text-[#F5C400] bg-[#F5C400]/10 border border-[#F5C400]/25 px-4 py-2 rounded-full mb-5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#F5C400]" />
-              Contact Us
+              {hero.badge}
             </span>
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-4">
-              Get in Touch With Us
+              {hero.title}
             </h1>
             <p className="text-lg text-white/65 leading-relaxed">
-              Ready to simplify your finances? Book a free consultation or send us a message.
+              {hero.description}
             </p>
           </motion.div>
         </div>
@@ -39,26 +34,26 @@ export default function Contact() {
             {/* Contact Info */}
             <motion.div initial={{ opacity: 0, x: -20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-2">
               <h2 className="text-2xl font-serif font-bold text-[#1E3A6E] mb-2 relative">
-                Contact Information
+                {infoHeading}
                 <span className="block w-10 h-1 bg-[#F5C400] rounded-full mt-2" />
               </h2>
               <p className="text-[#4A4A4A]/65 text-sm leading-relaxed mt-4 mb-7">
-                We'd love to hear from you. Reach out via any of the methods below or fill in the contact form.
+                {infoIntro}
               </p>
               <div className="space-y-4">
-                {contactInfo.map((info) => (
-                  <div key={info.label} className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-gray-100 hover:border-[#F5C400]/40 shadow-card hover:shadow-card-hover transition-all group">
+                {info.map((item) => (
+                  <div key={item.label} className="flex items-start gap-4 p-4 rounded-2xl bg-white border border-gray-100 hover:border-[#F5C400]/40 shadow-card hover:shadow-card-hover transition-all group">
                     <div className="w-10 h-10 rounded-xl bg-[#1E3A6E]/6 flex items-center justify-center shrink-0 group-hover:bg-[#F5C400]/15 transition-colors">
-                      <info.icon className="w-4.5 h-4.5 text-[#1E3A6E] w-4 h-4" />
+                      <Icon name={item.icon} className="w-4 h-4 text-[#1E3A6E]" />
                     </div>
                     <div>
-                      <p className="text-xs text-[#4A4A4A]/50 mb-0.5">{info.label}</p>
-                      {info.href ? (
-                        <a href={info.href} target={info.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-sm font-medium text-[#1E3A6E] hover:text-[#F5C400] transition-colors">
-                          {info.value}
+                      <p className="text-xs text-[#4A4A4A]/50 mb-0.5">{item.label}</p>
+                      {item.href ? (
+                        <a href={item.href} target={item.href.startsWith("http") ? "_blank" : undefined} rel="noopener noreferrer" className="text-sm font-medium text-[#1E3A6E] hover:text-[#F5C400] transition-colors">
+                          {item.value}
                         </a>
                       ) : (
-                        <p className="text-sm font-medium text-[#1E3A6E]">{info.value}</p>
+                        <p className="text-sm font-medium text-[#1E3A6E]">{item.value}</p>
                       )}
                     </div>
                   </div>
@@ -70,8 +65,8 @@ export default function Contact() {
             <motion.div initial={{ opacity: 0, x: 20 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} className="lg:col-span-3">
               <div className="bg-white rounded-2xl p-8 shadow-card border border-gray-100 relative overflow-hidden">
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#F5C400] via-[#FFD633] to-[#F5C400]" />
-                <h3 className="text-xl font-serif font-bold text-[#1E3A6E] mb-1">Book a Free Consultation</h3>
-                <p className="text-sm text-[#4A4A4A]/55 mb-6">Fill in the form below and we'll get back to you within 24 hours.</p>
+                <h3 className="text-xl font-serif font-bold text-[#1E3A6E] mb-1">{form.heading}</h3>
+                <p className="text-sm text-[#4A4A4A]/55 mb-6">{form.subheading}</p>
                 <ContactForm />
               </div>
             </motion.div>
@@ -84,7 +79,7 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="rounded-2xl overflow-hidden h-[380px] border border-gray-200 shadow-card">
             <iframe
-              src="https://www.google.com/maps?q=D24%20NRA0&output=embed"
+              src={mapEmbed}
               width="100%" height="100%" style={{ border: 0 }} allowFullScreen loading="lazy"
               referrerPolicy="no-referrer-when-downgrade" title="The Tax Link Location"
             />

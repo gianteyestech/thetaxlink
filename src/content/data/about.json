@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "badge": "About Us",
+    "title": "Expert Accounting & Taxation Services",
+    "description": "We provide expert accounting, taxation, and business support tailored to individuals and businesses, helping you manage compliance and financial decisions with confidence.",
+    "breadcrumb": "About Us"
+  },
+  "intro": {
+    "badge": "About",
+    "title": "Let Us Handle the Numbers",
+    "description": "The Tax Link brings together accounting, taxation, financial planning, and practical business support under one professional platform.",
+    "paragraph1": "At The Tax Link, we specialise in accounting and taxation services tailored to individuals and businesses. With a commitment to accuracy, compliance, and efficiency, our team supports seamless financial management, tax planning, and reporting.",
+    "paragraph2": "Whether you need business registration, bookkeeping, accounting, tax filing, or strategic financial advice, we help you navigate finance with clarity so you can focus on growing your business.",
+    "image": "/about.jpg",
+    "imageAlt": "Accounting services",
+    "imageCaption": "Accuracy, compliance, and practical support for growing businesses.",
+    "imageSubcaption": "The Tax Link professional platform",
+    "coreServices": [
+      "Business registration and setup support",
+      "Bookkeeping, accounting, and tax filing",
+      "Tax planning and strategic financial advice",
+      "Software, website, and technology solutions"
+    ]
+  },
+  "skills": {
+    "badge": "Skills",
+    "title": "The Right Skills for Your Business Growth",
+    "description": "Growing organisations need qualified support, especially when competition is increasing and teams are racing against time.",
+    "paragraph1": "The Tax Link helps businesses access suitable professional skills without going through a lengthy hiring process or entering fixed contracts.",
+    "paragraph2": "With Chartered Accountants Ireland qualification, KPMG Ireland experience, and ACCA-team capability, we understand the accounting, tax, audit, and operational skills your business needs to get the job done.",
+    "items": [
+      { "icon": "BadgeCheck", "title": "Qualified Expertise", "desc": "Led by Chartered Accountancy experience through Chartered Accountants Ireland and supported by an ACCA-skilled team." },
+      { "icon": "BriefcaseBusiness", "title": "Business Growth Focus", "desc": "We help organisations access the right professional skills without long hiring cycles or fixed employment contracts." },
+      { "icon": "Laptop", "title": "Digital Capability", "desc": "Alongside accounting and taxation, The Tax Link supports businesses with software, websites, and broader technology services." },
+      { "icon": "FileCheck", "title": "Audit Support", "desc": "Professional audit services are available through strategic collaboration with trusted partners." }
+    ]
+  },
+  "techAudit": {
+    "badge": "Technology & Audit",
+    "title": "Digital solutions with financial transparency",
+    "paragraph1": "The Tax Link also delivers IT solutions including software development, website development, and wider technology services for businesses that need a stronger digital presence.",
+    "paragraph2": "Through trusted partner collaboration, we also support professional audit services, combining innovation with financial transparency and compliance."
+  },
+  "closing": "We hope you enjoy our professional platform as much as we enjoy offering it to you. For questions or comments, contact us at info@thetaxlink.com."
+}

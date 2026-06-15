@@ -3,9 +3,18 @@ import { motion, useReducedMotion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle } from "lucide-react";
 import CTASection from "../home/CTASection";
+import { Icon } from "@/content/icons";
+import { useDoc } from "@/content/ContentContext";
 
-export default function ServicePageTemplate({ icon: Icon, color, title, subtitle, description, features, benefits }) {
+const DEFAULT_COLOR = "bg-[#F5C400] text-[#1E3A6E]";
+
+export default function ServicePageTemplate({ slug, color = DEFAULT_COLOR }) {
   const shouldReduceMotion = useReducedMotion();
+  const pages = useDoc("servicePages");
+  const data = pages[slug];
+
+  if (!data) return null;
+  const { icon, title, subtitle, description, features, benefits } = data;
 
   return (
     <>
@@ -21,7 +30,7 @@ export default function ServicePageTemplate({ icon: Icon, color, title, subtitle
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               className={`w-14 h-14 rounded-2xl ${color} flex items-center justify-center mb-6 shadow-gold`}
             >
-              <Icon className="w-7 h-7" />
+              <Icon name={icon} className="w-7 h-7" />
             </motion.div>
             <h1 className="text-4xl md:text-5xl font-serif font-bold text-white leading-tight mb-4">{title}</h1>
             <p className="text-lg text-white/65 leading-relaxed">{subtitle}</p>
@@ -91,7 +100,7 @@ export default function ServicePageTemplate({ icon: Icon, color, title, subtitle
               >
                 <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-[#F5C400] to-[#FFD633] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 <div className="w-11 h-11 rounded-xl bg-[#1E3A6E]/6 flex items-center justify-center mb-4 group-hover:bg-[#F5C400]/15 transition-all duration-300 group-hover:scale-110">
-                  <b.icon className="w-5 h-5 text-[#1E3A6E]" />
+                  <Icon name={b.icon} className="w-5 h-5 text-[#1E3A6E]" />
                 </div>
                 <h3 className="font-semibold text-[#1E3A6E] mb-2 text-sm">{b.title}</h3>
                 <p className="text-sm text-[#4A4A4A]/60 leading-relaxed">{b.desc}</p>

@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Shield, CheckCircle, Phone, Award, Users } from "lucide-react";
-
-const trustItems = [
-  { icon: Shield, label: "Revenue Compliant" },
-  { icon: Award, label: "Chartered Accountants" },
-  { icon: Users, label: "Tailored Business Support" },
-];
+import { ArrowRight, CheckCircle, Phone, Award } from "lucide-react";
+import { useDoc } from "@/content/ContentContext";
 
 export default function HeroSection() {
+  const { hero } = useDoc("home");
+  const { company } = useDoc("global");
+
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="max-w-7xl mx-auto px-6 py-16 md:py-24 lg:py-28 relative z-10">
@@ -19,38 +17,38 @@ export default function HeroSection() {
           <motion.div initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeOut" }}>
             <div className="inline-flex items-center gap-2 bg-[#F5C400]/10 border border-[#F5C400]/40 text-[#1E3A6E] text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#F5C400]" />
-              Chartered Accountants & Tax Advisors — Ireland
+              {hero.badge}
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-[3.1rem] font-serif font-bold text-[#1E3A6E] leading-[1.12] mb-5">
-              Professional Financial Services You Can{" "}
+              {hero.titleLead}{" "}
               <span className="relative inline-block">
-                Trust
+                {hero.titleHighlight}
                 <span className="absolute -bottom-1 left-0 w-full h-1 bg-gradient-to-r from-[#F5C400] to-[#FFD633] rounded-full" />
               </span>
             </h1>
 
             <p className="text-lg text-[#4A4A4A]/70 leading-relaxed mb-8 max-w-xl">
-              We are a team of qualified Chartered Accountants and Tax Advisors helping individuals and businesses across Ireland with accounting, tax planning, payroll, and more — with precision, integrity, and care.
+              {hero.description}
             </p>
 
             <div className="flex flex-wrap gap-4 mb-10">
-              <Link to="/contact">
+              <Link to={hero.primaryCtaPath}>
                 <Button size="lg" className="rounded-full bg-[#1E3A6E] hover:bg-[#162d57] text-white px-8 text-base font-medium shadow-[0_8px_24px_rgba(30,58,110,0.3)] hover:shadow-[0_12px_32px_rgba(30,58,110,0.4)] transition-all">
-                  Book Free Consultation
+                  {hero.primaryCtaLabel}
                   <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-              <a href="tel:+353851330866">
+              <a href={company.phoneHref}>
                 <Button size="lg" variant="outline" className="rounded-full border-[#1E3A6E]/25 text-[#1E3A6E] hover:bg-[#1E3A6E]/5 px-8 text-base font-medium">
                   <Phone className="w-4 h-4 mr-2" />
-                  +353 85 133 0866
+                  {company.phoneDisplay}
                 </Button>
               </a>
             </div>
 
             <div className="flex flex-wrap items-center gap-6 pt-6 border-t border-gray-100">
-              {trustItems.map((b) => (
+              {hero.trustItems.map((b) => (
                 <div key={b.label} className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-[#F5C400]" />
                   <span className="text-sm text-[#4A4A4A]/70 font-medium">{b.label}</span>
@@ -69,8 +67,8 @@ export default function HeroSection() {
             {/* Main image */}
             <div className="relative rounded-3xl overflow-hidden shadow-[0_24px_80px_rgba(14,31,61,0.2)]">
               <img
-                src="/hero.jpg"
-                alt="Professional accountant at work"
+                src={hero.image}
+                alt={hero.imageAlt}
                 className="w-full h-[480px] object-cover"
               />
               {/* Dark gradient overlay at bottom */}
@@ -81,11 +79,11 @@ export default function HeroSection() {
               {/* Logo on image */}
               <div className="absolute bottom-7 left-7">
                 <img
-                  src="/the-taxlink-logo.svg"
-                  alt="The Tax Link"
+                  src={company.logo}
+                  alt={company.name}
                   className="h-12 w-auto object-contain"
                 />
-                <p className="text-white/60 text-xs mt-1">Chartered Accountants & Business Advisors</p>
+                <p className="text-white/60 text-xs mt-1">{company.tagline}</p>
               </div>
             </div>
 
@@ -99,8 +97,8 @@ export default function HeroSection() {
                 <Award className="w-5 h-5 text-[#F5C400]" />
               </div>
               <div>
-                <p className="text-sm font-bold text-[#1E3A6E]">Chartered</p>
-                <p className="text-xs text-gray-400">Certified Accountants</p>
+                <p className="text-sm font-bold text-[#1E3A6E]">{hero.floatCard1.title}</p>
+                <p className="text-xs text-gray-400">{hero.floatCard1.subtitle}</p>
               </div>
             </motion.div>
 
@@ -110,8 +108,8 @@ export default function HeroSection() {
               animate={{ y: [0, 8, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
             >
-              <p className="text-2xl font-bold text-[#1E3A6E]">Tax</p>
-              <p className="text-xs font-semibold text-[#1E3A6E]/70">Planning Support</p>
+              <p className="text-2xl font-bold text-[#1E3A6E]">{hero.floatCard2.title}</p>
+              <p className="text-xs font-semibold text-[#1E3A6E]/70">{hero.floatCard2.subtitle}</p>
             </motion.div>
 
             {/* Floating stat 3 */}
@@ -120,8 +118,8 @@ export default function HeroSection() {
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
             >
-              <p className="text-2xl font-bold text-[#1E3A6E]">IT</p>
-              <p className="text-xs text-gray-400">Digital Solutions</p>
+              <p className="text-2xl font-bold text-[#1E3A6E]">{hero.floatCard3.title}</p>
+              <p className="text-xs text-gray-400">{hero.floatCard3.subtitle}</p>
             </motion.div>
           </motion.div>
         </div>

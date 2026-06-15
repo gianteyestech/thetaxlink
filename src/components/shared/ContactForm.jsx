@@ -7,14 +7,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Label } from "@/components/ui/label";
 import { Send, Loader2, CheckCircle } from "lucide-react";
 import { toast } from "sonner";
-
-const serviceOptions = [
-  "Business Advice", "Accounts Preparation", "Taxation", "Bookkeeping",
-  "Payroll", "Corporate & Secretarial", "Trademark Registration",
-  "Technology", "Marketing", "Outsourcing", "Other",
-];
+import { useDoc } from "@/content/ContentContext";
 
 export default function ContactForm() {
+  const { form: formContent } = useDoc("contact");
+  const serviceOptions = formContent.serviceOptions;
   const [form, setForm] = useState({ firstName: "", lastName: "", email: "", phone: "", service: "", message: "" });
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
@@ -40,8 +37,8 @@ export default function ContactForm() {
         <div className="w-16 h-16 mx-auto rounded-full bg-[#F5C400]/15 border border-[#F5C400]/30 flex items-center justify-center mb-4">
           <CheckCircle className="w-8 h-8 text-[#1E3A6E]" />
         </div>
-        <h3 className="text-xl font-serif font-bold text-[#1E3A6E] mb-2">Thank You!</h3>
-        <p className="text-[#4A4A4A]/60 text-sm mb-6">We've received your message and will get back to you shortly.</p>
+        <h3 className="text-xl font-serif font-bold text-[#1E3A6E] mb-2">{formContent.successTitle}</h3>
+        <p className="text-[#4A4A4A]/60 text-sm mb-6">{formContent.successMessage}</p>
         <Button className="rounded-full bg-[#1E3A6E] hover:bg-[#162d57] text-white px-6 h-10" onClick={() => { setSent(false); setForm({ firstName: "", lastName: "", email: "", phone: "", service: "", message: "" }); }}>
           Send Another Message
         </Button>

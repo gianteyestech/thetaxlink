@@ -1,0 +1,133 @@
+{
+  "hero": {
+    "badge": "Chartered Accountants & Tax Advisors — Ireland",
+    "titleLead": "Professional Financial Services You Can",
+    "titleHighlight": "Trust",
+    "description": "We are a team of qualified Chartered Accountants and Tax Advisors helping individuals and businesses across Ireland with accounting, tax planning, payroll, and more — with precision, integrity, and care.",
+    "primaryCtaLabel": "Book Free Consultation",
+    "primaryCtaPath": "/contact",
+    "image": "/hero.jpg",
+    "imageAlt": "Professional accountant at work",
+    "trustItems": [
+      { "icon": "Shield", "label": "Revenue Compliant" },
+      { "icon": "Award", "label": "Chartered Accountants" },
+      { "icon": "Users", "label": "Tailored Business Support" }
+    ],
+    "floatCard1": { "title": "Chartered", "subtitle": "Certified Accountants" },
+    "floatCard2": { "title": "Tax", "subtitle": "Planning Support" },
+    "floatCard3": { "title": "IT", "subtitle": "Digital Solutions" }
+  },
+  "stats": [
+    { "icon": "BadgeCheck", "value": "CA", "label": "Ireland Qualified" },
+    { "icon": "Briefcase", "value": "Tax", "label": "Planning & Filing" },
+    { "icon": "Laptop", "value": "IT", "label": "Digital Solutions" },
+    { "icon": "FileCheck", "value": "Audit", "label": "Partner Support" }
+  ],
+  "aboutPreview": {
+    "badge": "About Us",
+    "title": "Expert Accounting & Taxation Services",
+    "description": "At The Tax Link, we provide accounting, taxation, and business support tailored to individuals and businesses.",
+    "image": "/about.jpg",
+    "imageAlt": "Accounting services",
+    "ctaLabel": "Learn More About Us",
+    "ctaPath": "/about-us",
+    "highlights": [
+      "Accounting and taxation services for individuals and businesses",
+      "Business registration, bookkeeping, accounting, and tax filing",
+      "Chartered Accountants Ireland qualification and ACCA-team support",
+      "Technology and audit support through trusted collaboration"
+    ]
+  },
+  "servicesGrid": {
+    "badge": "Our Services",
+    "title": "Expert Financial Solutions",
+    "description": "From accounting and tax to technology, marketing, and outsourcing, we provide practical support for growing businesses.",
+    "items": [
+      { "icon": "Lightbulb", "title": "Business Advice", "desc": "Expert guidance for startups, expansion, operations, and structure.", "path": "/business-advice" },
+      { "icon": "FileText", "title": "Accounts Preparation", "desc": "Clear accounts from your source documents and summaries.", "path": "/accounts-preparation" },
+      { "icon": "Calculator", "title": "Taxation", "desc": "Irish tax obligations, planning, deadlines, and refunds.", "path": "/taxation" },
+      { "icon": "BookOpen", "title": "Bookkeeping", "desc": "Transactions, reconciliation, reporting, payroll, and tax-ready books.", "path": "/bookkeeping" },
+      { "icon": "Wallet", "title": "Payroll", "desc": "Payslips, Revenue filings, employee setup, and compliance support.", "path": "/payroll" },
+      { "icon": "Building", "title": "Corporate & Secretarial", "desc": "Company formation, CRO filings, annual returns, and governance.", "path": "/corporate-secretarial" },
+      { "icon": "Award", "title": "Trademark Registration", "desc": "Brand protection for names, logos, symbols, and trademarks.", "path": "/trademark-registration" },
+      { "icon": "Cpu", "title": "Technology", "desc": "Domains, websites, logos, development, and business email.", "path": "/technology" },
+      { "icon": "Megaphone", "title": "Marketing", "desc": "Marketing support to build awareness, trust, sales, and reputation.", "path": "/marketing" },
+      { "icon": "Globe", "title": "Outsourcing", "desc": "Outsourced accounting, payroll, tax, VAT, and back-office work.", "path": "/outsourcing" }
+    ]
+  },
+  "whyChooseUs": {
+    "badge": "Why Choose Us",
+    "title": "Why Businesses Trust The Tax Link",
+    "description": "We bring together qualification, experience, and a client-first philosophy.",
+    "image": "/whychoose.jpg",
+    "imageAlt": "Professional business meeting",
+    "quote": "\"We go beyond numbers to deliver real value for our clients.\"",
+    "quoteAuthor": "— The Tax Link Team",
+    "reasons": [
+      { "icon": "Award", "title": "Chartered Accountants", "desc": "Our team holds chartered accountancy qualifications with deep expertise in Irish accounting and tax law." },
+      { "icon": "Shield", "title": "Revenue Compliant", "desc": "We ensure your business stays fully compliant with Revenue, CRO, and all regulatory requirements." },
+      { "icon": "TrendingUp", "title": "Tax Optimisation", "desc": "Proactive strategies to legally minimise your tax burden and help you retain more of what you earn." },
+      { "icon": "Eye", "title": "Full Transparency", "desc": "Clear communication, no jargon, transparent pricing — you always know exactly what you're paying for." },
+      { "icon": "Sparkles", "title": "Tailored Solutions", "desc": "Every client is different. We design bespoke solutions around your specific business needs and goals." },
+      { "icon": "Users", "title": "Dedicated Support", "desc": "A dedicated account manager ensures consistent, responsive service throughout our partnership." }
+    ]
+  },
+  "taxPlanning": {
+    "badge": "Expert Tax Planning",
+    "title": "Smart Tax Strategies That Save You Money",
+    "paragraph1": "Our proactive tax planning approach ensures you take advantage of every legitimate opportunity to reduce your tax burden while maintaining full compliance with Irish tax legislation.",
+    "paragraph2": "Whether you're a sole trader, a partnership, or a limited company, we craft a personalised tax strategy designed to protect your wealth and support your growth.",
+    "ctaLabel": "Explore Tax Services",
+    "ctaPath": "/taxation",
+    "image": "/taxplanning.jpg",
+    "imageAlt": "Tax planning documents",
+    "features": [
+      { "icon": "TrendingDown", "title": "Tax Minimisation", "desc": "Legally reduce your tax liability with expert planning strategies tailored to you." },
+      { "icon": "FileCheck", "title": "Revenue Compliance", "desc": "Stay fully compliant with Irish Revenue requirements, on time, every time." },
+      { "icon": "Landmark", "title": "Capital Taxes", "desc": "Strategic advice on CGT, CAT, stamp duty, and inheritance tax planning." },
+      { "icon": "PiggyBank", "title": "Maximise Reliefs", "desc": "Identify and claim every available tax relief, credit, and deduction." }
+    ]
+  },
+  "process": {
+    "badge": "Our Process",
+    "title": "How We Work With You",
+    "description": "A simple, transparent process designed to deliver results and build lasting partnerships.",
+    "steps": [
+      { "icon": "PhoneCall", "title": "Consultation", "desc": "Book a free consultation to discuss your needs and goals." },
+      { "icon": "Search", "title": "Review", "desc": "We review your financial situation and identify opportunities." },
+      { "icon": "Target", "title": "Strategy", "desc": "We craft a tailored strategy aligned with your objectives." },
+      { "icon": "Cog", "title": "Implementation", "desc": "Our team executes the plan with precision and transparency." },
+      { "icon": "HeartHandshake", "title": "Ongoing Support", "desc": "Continuous support and advice to keep you on track." }
+    ]
+  },
+  "testimonials": {
+    "badge": "Client Testimonials",
+    "title": "What Our Clients Say",
+    "description": "Hear from business owners and professionals across Ireland who trust The Tax Link.",
+    "items": [
+      { "name": "Sarah O'Brien", "role": "Director, O'Brien Retail Ltd", "avatar": "/avatar-1.jpg", "text": "The Tax Link transformed our finances. Their expertise saved us thousands in tax liability and gave us the confidence to expand our business. Truly exceptional service.", "stars": 5 },
+      { "name": "Michael Doyle", "role": "Director, Doyle Construction Ltd", "avatar": "/avatar-2.jpg", "text": "Professional, responsive, and incredibly knowledgeable. They handle our accounts, payroll, and corporate tax with precision and always meet every deadline. Highly recommended!", "stars": 5 },
+      { "name": "Aoife Murphy", "role": "Founder, Murphy Consulting", "avatar": "/avatar-3.jpg", "text": "As a business owner, I needed advisors I could truly trust. The Tax Link made everything simple, stress-free, and delivered real savings. Their team is absolutely brilliant.", "stars": 5 }
+    ]
+  },
+  "faq": {
+    "badge": "FAQs",
+    "title": "Frequently Asked Questions",
+    "description": "Find quick answers to the most common questions about our services.",
+    "items": [
+      { "q": "What services does The Tax Link offer?", "a": "We provide a full suite of business services including accounting, taxation, bookkeeping, payroll, corporate secretarial, trademark registration, technology, marketing, and outsourcing solutions." },
+      { "q": "Do you work with individuals or only businesses?", "a": "We work with both individuals and businesses of all sizes, from sole traders and freelancers to large corporations and multinationals." },
+      { "q": "How much does a consultation cost?", "a": "Your initial consultation is completely free. We'll discuss your needs and provide a transparent quote with no hidden fees." },
+      { "q": "Are you based in Ireland?", "a": "Yes, we are proudly based in Ireland and serve clients throughout the country. We also support international clients doing business in Ireland." },
+      { "q": "How do I get started?", "a": "Simply book a free consultation through our website or call us at +353 85 133 0866. We'll take it from there!" },
+      { "q": "Can you help with Revenue audits?", "a": "Absolutely. Our team has extensive experience in managing Revenue audits and can guide you through the entire process with confidence." }
+    ]
+  },
+  "cta": {
+    "badge": "Free Consultation",
+    "title": "Ready to Take Control of Your Finances?",
+    "description": "Book your free consultation today and discover how The Tax Link can help your business thrive.",
+    "primaryCtaLabel": "Book Free Consultation",
+    "primaryCtaPath": "/contact"
+  }
+}

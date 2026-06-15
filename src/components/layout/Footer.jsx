@@ -1,32 +1,16 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock, MessageCircle } from "lucide-react";
-
-const serviceLinks = [
-  { name: "Business Advice", path: "/business-advice" },
-  { name: "Accounts Preparation", path: "/accounts-preparation" },
-  { name: "Taxation", path: "/taxation" },
-  { name: "Bookkeeping", path: "/bookkeeping" },
-  { name: "Payroll", path: "/payroll" },
-  { name: "Corporate & Secretarial", path: "/corporate-secretarial" },
-  { name: "Trademark Registration", path: "/trademark-registration" },
-];
-
-const quickLinks = [
-  { name: "Home", path: "/" },
-  { name: "About Us", path: "/about-us" },
-  { name: "All Services", path: "/our-services" },
-  { name: "Contact Us", path: "/contact" },
-  { name: "Privacy Policy", path: "/privacy" },
-  { name: "Terms & Conditions", path: "/terms" },
-];
-
-const socials = [
-  { label: "WhatsApp", href: "https://wa.me/353851330866", icon: MessageCircle, external: true },
-  { label: "Email", href: "mailto:info@thetaxlink.com", icon: Mail, external: false },
-  { label: "Phone", href: "tel:+353851330866", icon: Phone, external: false },
-];
+import { useDoc } from "@/content/ContentContext";
 
 export default function Footer() {
+  const { company, footer } = useDoc("global");
+
+  const socials = [
+    { label: "WhatsApp", href: company.whatsapp, icon: MessageCircle, external: true },
+    { label: "Email", href: `mailto:${company.email}`, icon: Mail, external: false },
+    { label: "Phone", href: company.phoneHref, icon: Phone, external: false },
+  ];
+
   return (
     <footer className="bg-gradient-to-b from-white to-[#F8F9FC] text-[#4A4A4A] border-t border-[#1E3A6E]/10">
       {/* Gold accent line */}
@@ -39,13 +23,13 @@ export default function Footer() {
           <div>
             <Link to="/" className="inline-block mb-6 transition-transform duration-300 hover:scale-[1.02]">
               <img
-                src="/the-taxlink-logo.svg"
-                alt="The Tax Link"
+                src={company.logo}
+                alt={company.name}
                 className="h-20 w-auto object-contain"
               />
             </Link>
             <p className="text-[#4A4A4A]/70 text-sm leading-relaxed mb-6 max-w-xs">
-              Expert Accounting &amp; Tax Solutions — helping you save more and grow faster.
+              {footer.blurb}
             </p>
             <div className="flex items-center gap-2.5">
               {socials.map(({ label, href, icon: Icon, external }) => (
@@ -66,10 +50,10 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-[#1E3A6E] mb-5 flex items-center gap-2">
               <span className="w-4 h-0.5 bg-[#F5C400] rounded-full" />
-              Our Services
+              {footer.servicesHeading}
             </h4>
             <ul className="space-y-2.5">
-              {serviceLinks.map((link) => (
+              {footer.serviceLinks.map((link) => (
                 <li key={link.path}>
                   <Link to={link.path} className="text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
                     {link.name}
@@ -83,10 +67,10 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-[#1E3A6E] mb-5 flex items-center gap-2">
               <span className="w-4 h-0.5 bg-[#F5C400] rounded-full" />
-              Quick Links
+              {footer.quickLinksHeading}
             </h4>
             <ul className="space-y-2.5">
-              {quickLinks.map((link) => (
+              {footer.quickLinks.map((link) => (
                 <li key={link.path}>
                   <Link to={link.path} className="text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
                     {link.name}
@@ -100,28 +84,28 @@ export default function Footer() {
           <div>
             <h4 className="text-sm font-semibold text-[#1E3A6E] mb-5 flex items-center gap-2">
               <span className="w-4 h-0.5 bg-[#F5C400] rounded-full" />
-              Get In Touch
+              {footer.contactHeading}
             </h4>
             <ul className="space-y-3.5">
               <li>
-                <a href="mailto:info@thetaxlink.com" className="flex items-start gap-3 text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
+                <a href={`mailto:${company.email}`} className="flex items-start gap-3 text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
                   <Mail className="w-4 h-4 mt-0.5 shrink-0 text-[#1E3A6E]" />
-                  info@thetaxlink.com
+                  {company.email}
                 </a>
               </li>
               <li>
-                <a href="tel:+353851330866" className="flex items-start gap-3 text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
+                <a href={company.phoneHref} className="flex items-start gap-3 text-sm text-[#4A4A4A]/70 hover:text-[#1E3A6E] transition-colors duration-200">
                   <Phone className="w-4 h-4 mt-0.5 shrink-0 text-[#1E3A6E]" />
-                  +353 85 133 0866
+                  {company.phoneDisplay}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-sm text-[#4A4A4A]/70">
                 <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-[#1E3A6E]" />
-                D24 NRA0
+                {company.address}
               </li>
               <li className="flex items-start gap-3 text-sm text-[#4A4A4A]/70">
                 <Clock className="w-4 h-4 mt-0.5 shrink-0 text-[#1E3A6E]" />
-                Mon – Fri: 9:00AM – 6:00PM
+                {company.hoursLong}
               </li>
             </ul>
           </div>
@@ -130,7 +114,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-[#1E3A6E]/10 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-[#4A4A4A]/55">
-            © {new Date().getFullYear()} The Tax Link. All rights reserved.
+            © {new Date().getFullYear()} {footer.copyright}
           </p>
           <div className="flex items-center gap-5 text-xs text-[#4A4A4A]/55">
             <Link to="/privacy" className="hover:text-[#1E3A6E] transition-colors">Privacy Policy</Link>

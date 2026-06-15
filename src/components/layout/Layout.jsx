@@ -4,6 +4,7 @@ import TopBar from "./TopBar";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import WhatsAppButton from "../shared/WhatsAppButton";
+import DraftBanner from "@/admin/DraftBanner";
 
 export default function Layout() {
   const { pathname } = useLocation();
@@ -21,6 +22,7 @@ export default function Layout() {
       </main>
       <Footer />
       <WhatsAppButton />
+      <DraftBanner />
     </div>
   );
 }

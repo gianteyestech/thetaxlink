@@ -1,0 +1,19 @@
+{
+  "hero": {
+    "badge": "Our Services",
+    "title": "Our Services",
+    "description": "Practical accounting, tax, compliance, technology, marketing, and outsourcing support for your business."
+  },
+  "items": [
+    { "icon": "Lightbulb", "title": "Business Advice", "desc": "Expert guidance for startups, expansion, operations, structure, and practical business decisions.", "path": "/business-advice" },
+    { "icon": "FileText", "title": "Accounts Preparation", "desc": "Clear financial records and accounts prepared from your source documents and summaries.", "path": "/accounts-preparation" },
+    { "icon": "Calculator", "title": "Taxation", "desc": "Support across Irish tax obligations, planning, deadlines, refunds, and Revenue correspondence.", "path": "/taxation" },
+    { "icon": "BookOpen", "title": "Bookkeeping", "desc": "Recording, reconciliation, payroll, reporting, and tax-ready books for growing businesses.", "path": "/bookkeeping" },
+    { "icon": "Wallet", "title": "Payroll", "desc": "Reliable payroll processing, payslips, Revenue filings, employee registrations, and compliance support.", "path": "/payroll" },
+    { "icon": "Building", "title": "Corporate & Secretarial", "desc": "Company formation, business registration, CRO filings, annual returns, and governance support.", "path": "/corporate-secretarial" },
+    { "icon": "Award", "title": "Trademark Registration", "desc": "Brand protection support for company names, logos, symbols, and trademarks in key jurisdictions.", "path": "/trademark-registration" },
+    { "icon": "Cpu", "title": "Technology", "desc": "Domain registration, website and logo design, website development, and business email setup.", "path": "/technology" },
+    { "icon": "Megaphone", "title": "Marketing", "desc": "Marketing support to build your name, attract customers, improve reputation, and increase sales.", "path": "/marketing" },
+    { "icon": "Globe", "title": "Outsourcing", "desc": "Outsourced VAT, payroll, tax, bookkeeping, accounting, annual returns, and company support.", "path": "/outsourcing" }
+  ]
+}

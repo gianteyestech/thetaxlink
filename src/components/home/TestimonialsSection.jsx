@@ -1,32 +1,11 @@
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
 import SectionHeading from "../shared/SectionHeading";
-
-const testimonials = [
-  {
-    name: "Sarah O'Brien",
-    role: "Director, O'Brien Retail Ltd",
-    avatar: "/avatar-1.jpg",
-    text: "The Tax Link transformed our finances. Their expertise saved us thousands in tax liability and gave us the confidence to expand our business. Truly exceptional service.",
-    stars: 5,
-  },
-  {
-    name: "Michael Doyle",
-    role: "Director, Doyle Construction Ltd",
-    avatar: "/avatar-2.jpg",
-    text: "Professional, responsive, and incredibly knowledgeable. They handle our accounts, payroll, and corporate tax with precision and always meet every deadline. Highly recommended!",
-    stars: 5,
-  },
-  {
-    name: "Aoife Murphy",
-    role: "Founder, Murphy Consulting",
-    avatar: "/avatar-3.jpg",
-    text: "As a business owner, I needed advisors I could truly trust. The Tax Link made everything simple, stress-free, and delivered real savings. Their team is absolutely brilliant.",
-    stars: 5,
-  },
-];
+import { useDoc } from "@/content/ContentContext";
 
 export default function TestimonialsSection() {
+  const { testimonials } = useDoc("home");
+
   return (
     <section className="py-24 md:py-32 bg-[#0E1F3D] relative overflow-hidden">
       <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-[#F5C400]/40 to-transparent" />
@@ -35,13 +14,13 @@ export default function TestimonialsSection() {
 
       <div className="max-w-7xl mx-auto px-6 relative">
         <SectionHeading
-          badge="Client Testimonials"
-          title="What Our Clients Say"
-          description="Hear from business owners and professionals across Ireland who trust The Tax Link."
+          badge={testimonials.badge}
+          title={testimonials.title}
+          description={testimonials.description}
           light
         />
         <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.map((t, i) => (
+          {testimonials.items.map((t, i) => (
             <motion.div
               key={t.name}
               initial={{ opacity: 0, y: 20 }}

@@ -1,16 +1,11 @@
 import { motion } from "framer-motion";
-import { PhoneCall, Search, Target, Cog, HeartHandshake } from "lucide-react";
 import SectionHeading from "../shared/SectionHeading";
-
-const steps = [
-  { icon: PhoneCall, title: "Consultation", desc: "Book a free consultation to discuss your needs and goals." },
-  { icon: Search, title: "Review", desc: "We review your financial situation and identify opportunities." },
-  { icon: Target, title: "Strategy", desc: "We craft a tailored strategy aligned with your objectives." },
-  { icon: Cog, title: "Implementation", desc: "Our team executes the plan with precision and transparency." },
-  { icon: HeartHandshake, title: "Ongoing Support", desc: "Continuous support and advice to keep you on track." },
-];
+import { Icon } from "@/content/icons";
+import { useDoc } from "@/content/ContentContext";
 
 export default function ProcessSection() {
+  const { process } = useDoc("home");
+
   return (
     <section className="py-24 md:py-32 bg-[#0E1F3D] text-white overflow-hidden relative">
       {/* Decorative */}
@@ -20,16 +15,16 @@ export default function ProcessSection() {
 
       <div className="max-w-7xl mx-auto px-6 relative">
         <SectionHeading
-          badge="Our Process"
-          title="How We Work With You"
-          description="A simple, transparent process designed to deliver results and build lasting partnerships."
+          badge={process.badge}
+          title={process.title}
+          description={process.description}
           light
         />
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 relative">
           {/* Connector line */}
           <div className="hidden lg:block absolute top-8 left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-[#F5C400]/20 to-transparent" />
 
-          {steps.map((step, i) => (
+          {process.steps.map((step, i) => (
             <motion.div
               key={step.title}
               initial={{ opacity: 0, y: 30 }}
@@ -39,7 +34,7 @@ export default function ProcessSection() {
               className="relative text-center group"
             >
               <div className="w-16 h-16 mx-auto rounded-2xl bg-white/6 border border-white/10 flex items-center justify-center mb-5 group-hover:bg-[#F5C400]/12 group-hover:border-[#F5C400]/25 transition-all relative">
-                <step.icon className="w-6 h-6 text-[#F5C400]" />
+                <Icon name={step.icon} className="w-6 h-6 text-[#F5C400]" />
                 <span className="absolute -top-3 -right-3 w-6 h-6 rounded-full bg-[#F5C400] text-[#1E3A6E] text-xs font-bold flex items-center justify-center shadow-gold">
                   {i + 1}
                 </span>

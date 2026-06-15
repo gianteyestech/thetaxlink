@@ -1,0 +1,257 @@
+{
+  "business-advice": {
+    "icon": "Lightbulb",
+    "title": "Business Advice",
+    "subtitle": "Tailored business advice for growth, structure, and success.",
+    "description": [
+      "We provide expert business advice for people launching a startup, expanding an existing company, or improving day-to-day operations.",
+      "Our support covers business formation choices, practical recommendations, grant and finance awareness, and the key differences between trading as a limited company, partnership, sole trader, or individual.",
+      "We help clients understand liability, legal structure, continuity, corporation tax advantages, and name protection so they can make confident business decisions."
+    ],
+    "features": [
+      "Limited company by shares guidance",
+      "Partnership setup considerations",
+      "Sole trader registration advice",
+      "Individual business advice",
+      "Grant and financial support guidance",
+      "Company structure and liability review",
+      "Corporation tax and business continuity considerations",
+      "Business name protection guidance"
+    ],
+    "benefits": [
+      { "icon": "Shield", "title": "Better Structure", "desc": "Choose a business setup that fits your liability, tax, and growth needs." },
+      { "icon": "TrendingUp", "title": "Growth Ready", "desc": "Get practical recommendations for launching or expanding with confidence." },
+      { "icon": "Users", "title": "Informed Decisions", "desc": "Understand the steps, obligations, and options before you commit." }
+    ]
+  },
+  "accounts-preparation": {
+    "icon": "FileText",
+    "title": "Accounts Preparation",
+    "subtitle": "Clear, compliant financial records for better business decisions.",
+    "description": [
+      "Businesses must keep adequate books and records that show a true picture of their financial position. We prepare accounts from the source documents and summaries you provide.",
+      "Our team translates financial statements into a simple format, helping you understand business performance and identify what needs attention.",
+      "We support account preparation across sectors including construction, charities, cleaning and gardening, car servicing, education, heating and plumbing, mobile shops, professional services, property management, retail, cafes, restaurants, and taxi businesses."
+    ],
+    "features": [
+      "Financial statements under FRS 102, IFRS, US GAAP, and LUX GAAP",
+      "Sole trader account preparation",
+      "Management accounts",
+      "Forecasts and cash flow projections",
+      "Year-end source document review",
+      "Simple explanation of financial statements",
+      "Sector-aware account preparation",
+      "Timely, accurate accounts for compliance"
+    ],
+    "benefits": [
+      { "icon": "BarChart3", "title": "Clear Records", "desc": "See a more accurate picture of your business finances." },
+      { "icon": "Shield", "title": "Compliance Support", "desc": "Prepare accounts properly and on time for required authorities." },
+      { "icon": "TrendingUp", "title": "Better Decisions", "desc": "Use understandable numbers to improve performance and planning." }
+    ]
+  },
+  "taxation": {
+    "icon": "Calculator",
+    "title": "Taxation",
+    "subtitle": "Irish tax support that reduces stress and keeps deadlines under control.",
+    "description": [
+      "The Irish tax system can be complicated and stressful, and mistakes can lead to penalties or missed refunds. We help clients use available tax benefits while staying compliant.",
+      "Our tax accountants keep up with changing legislation and warn clients before Revenue deadlines so payments and filings are handled on time.",
+      "We support individuals, self-employed people, companies, firms, and partnerships with tax filings, planning, refund support, Revenue correspondence, and audit-process guidance."
+    ],
+    "features": [
+      "Income tax",
+      "Corporation tax",
+      "Value Added Tax",
+      "Capital Gains Tax",
+      "Relevant Contracts Tax",
+      "Deposit Interest Retention Tax",
+      "Capital Acquisition Tax",
+      "Stamp duties",
+      "PAYE, PRSI, and levies",
+      "Withholding tax"
+    ],
+    "benefits": [
+      { "icon": "Bell", "title": "Deadline Alerts", "desc": "Know what is due before Revenue deadlines arrive." },
+      { "icon": "Shield", "title": "Penalty Reduction", "desc": "Reduce the risk of avoidable mistakes, fines, and missed filings." },
+      { "icon": "TrendingUp", "title": "Tax Planning", "desc": "Improve cash flow through practical planning and available allowances." }
+    ]
+  },
+  "bookkeeping": {
+    "icon": "BookOpen",
+    "title": "Bookkeeping",
+    "subtitle": "Reliable and accurate bookkeeping services for business growth.",
+    "description": [
+      "Bookkeeping is the backbone of a successful business because it records and organises financial transactions and shows the health of the company.",
+      "At The Tax Link, we provide bookkeeping solutions tailored to your business, whether you are a startup or an established company.",
+      "We keep financial records organised, tax-ready, and useful for management decisions so you can focus on growing the business."
+    ],
+    "features": [
+      "Recording financial transactions",
+      "Accounts payable and receivable management",
+      "Bank reconciliation",
+      "Payroll processing",
+      "Balance sheet and income statement reporting",
+      "Cash flow summaries",
+      "Tax preparation and filing support",
+      "Personalised bookkeeping service"
+    ],
+    "benefits": [
+      { "icon": "BookOpen", "title": "Accurate Records", "desc": "Keep income, expenses, sales, invoices, and payments organised." },
+      { "icon": "BarChart3", "title": "Clear Reporting", "desc": "Use concise reports to understand performance and cash flow." },
+      { "icon": "Clock", "title": "Less Admin", "desc": "Free up time by letting specialists handle routine bookkeeping work." }
+    ]
+  },
+  "payroll": {
+    "icon": "Wallet",
+    "title": "Payroll",
+    "subtitle": "Effortless payroll management for your business.",
+    "description": [
+      "We simplify payroll with reliable processing, accurate wage calculations, Revenue filings, and compliance management.",
+      "Our payroll support is designed to reduce administration, minimise errors, and ensure employees are paid correctly and on time.",
+      "The computerised payroll system can produce weekly, bimonthly, or monthly payslips that can be emailed or printed."
+    ],
+    "features": [
+      "Register new employees with Revenue",
+      "Generate weekly, bimonthly, or monthly payslips",
+      "File monthly and annual payroll returns with Revenue",
+      "Obtain employee tax deduction certificates",
+      "Maintain compliance with regulatory updates",
+      "Advice on employment contracts",
+      "Ad hoc advice for employers and employees",
+      "Scalable payroll support for startups and established companies"
+    ],
+    "benefits": [
+      { "icon": "FileCheck", "title": "Accurate Payslips", "desc": "Produce timely payslips and payroll records for your team." },
+      { "icon": "Shield", "title": "Revenue Compliance", "desc": "Keep payroll filings and employee registrations aligned with requirements." },
+      { "icon": "Clock", "title": "Time Saved", "desc": "Reduce manual payroll administration and avoid avoidable errors." }
+    ]
+  },
+  "corporate-secretarial": {
+    "icon": "Building",
+    "title": "Corporate & Secretarial",
+    "subtitle": "Corporate governance, filings, and compliance handled professionally.",
+    "description": [
+      "We provide corporate secretarial services for Irish businesses, with support across company secretarial work, compliance, and corporate governance.",
+      "As corporate regulation increases, we help businesses meet legal commitments and complete required tasks professionally and on time.",
+      "We also assist with company formation, Revenue paperwork, Companies Registration Office paperwork, and tax registration advice."
+    ],
+    "features": [
+      "Business name registration",
+      "Company formation",
+      "CRO filings",
+      "Company annual returns",
+      "Sole trader registration",
+      "Business detail changes",
+      "Company restorations",
+      "Voluntary strike-offs",
+      "Late annual return solutions"
+    ],
+    "benefits": [
+      { "icon": "FileCheck", "title": "Governance Support", "desc": "Keep company records, changes, and filings under control." },
+      { "icon": "Shield", "title": "Compliance Confidence", "desc": "Meet legal commitments as corporate regulation increases." },
+      { "icon": "Clock", "title": "Fast Setup", "desc": "Get company formation and registration work moving efficiently." }
+    ]
+  },
+  "trademark-registration": {
+    "icon": "Award",
+    "title": "Trademark Registration",
+    "subtitle": "Protect your brand with trademark and intellectual property support.",
+    "description": [
+      "In a competitive market, protecting the core of your company is essential. Trademark registration helps identify and protect products or services in Ireland and other jurisdictions.",
+      "Registering a trademark can make it easier to stop others using it and prove ownership of specific goods or services.",
+      "Ignoring intellectual property rights can expose a business to the risk of competitors copying ideas, goodwill, reputation, or innovations."
+    ],
+    "features": [
+      "Company name protection",
+      "Company logo protection",
+      "Brand name protection",
+      "Symbol protection",
+      "Ireland trademark registration",
+      "EU trade mark registration",
+      "US trade mark registration",
+      "UK trade mark registration"
+    ],
+    "benefits": [
+      { "icon": "BadgeCheck", "title": "Brand Ownership", "desc": "Strengthen proof of ownership for names, logos, and brand assets." },
+      { "icon": "Shield", "title": "Risk Reduction", "desc": "Reduce exposure to copycats, infringers, and reputational damage." },
+      { "icon": "Globe2", "title": "Wider Coverage", "desc": "Access support for Ireland, EU, UK, and US trademark registration." }
+    ]
+  },
+  "technology": {
+    "icon": "Cpu",
+    "title": "Technology",
+    "subtitle": "Digital presence and technology solutions for modern businesses.",
+    "description": [
+      "We help businesses strengthen their digital presence with practical technology services designed for growth in a competitive market.",
+      "Our technology support covers domain registration, professional website design and development, custom logo creation, and secure business email.",
+      "Whether you are starting from scratch or improving an existing online presence, we deliver scalable digital services aligned with your business goals."
+    ],
+    "features": [
+      "Domain name registration",
+      "Website design",
+      "Logo design",
+      "Website development",
+      "Business email address setup",
+      "Online presence improvements",
+      "Scalable digital solutions",
+      "Brand-aligned technology support"
+    ],
+    "benefits": [
+      { "icon": "Globe2", "title": "Stronger Presence", "desc": "Create a cleaner online foundation with domains, websites, and email." },
+      { "icon": "Palette", "title": "Brand Support", "desc": "Pair your website with logo and visual identity support." },
+      { "icon": "Mail", "title": "Secure Email", "desc": "Set up professional business email for trusted communication." }
+    ]
+  },
+  "marketing": {
+    "icon": "Megaphone",
+    "title": "Marketing",
+    "subtitle": "Marketing support that helps your business grow and stay visible.",
+    "description": [
+      "Marketing acts like the lifeblood of a company. Even strong products and services can miss their target market without effective marketing.",
+      "We help businesses increase awareness, attract and keep customers, improve reputation, and support sales growth.",
+      "Effective marketing gets your product or service in front of the right audience faster while giving you more time to focus on the rest of the business."
+    ],
+    "features": [
+      "Brand awareness support",
+      "Sales growth strategy",
+      "Customer attraction and retention",
+      "Reputation improvement",
+      "Audience engagement",
+      "Marketing communication planning",
+      "Time-saving campaign support",
+      "Growth-focused marketing advice"
+    ],
+    "benefits": [
+      { "icon": "BadgeCheck", "title": "Brand Recognition", "desc": "Help customers remember your name, products, and services." },
+      { "icon": "TrendingUp", "title": "More Sales Opportunities", "desc": "Create more chances to turn attention into enquiries and sales." },
+      { "icon": "Users", "title": "Customer Loyalty", "desc": "Build a stronger base of customers who know and trust your brand." }
+    ]
+  },
+  "outsourcing": {
+    "icon": "Globe",
+    "title": "Outsourcing",
+    "subtitle": "Strategic outsourcing to streamline operations and reduce costs.",
+    "description": [
+      "Outsourcing helps businesses reduce costs, access specialised expertise, and scale operations without carrying every task in-house.",
+      "We provide cost-effective, high-quality outsourcing support so you can focus on the work that matters most.",
+      "Our outsourcing services cover accounting, payroll, tax, bookkeeping, reconciliation, annual returns, and company secretarial support."
+    ],
+    "features": [
+      "VAT returns preparation",
+      "Payroll processing",
+      "Personal tax returns",
+      "Bookkeeping services",
+      "Bank and credit card reconciliation",
+      "Company year-end accounts",
+      "Corporation tax returns",
+      "Annual return submissions",
+      "Company secretary and support",
+      "Daily or weekly accounting entries"
+    ],
+    "benefits": [
+      { "icon": "Clock", "title": "Lower Admin Load", "desc": "Move routine finance and compliance tasks to trusted support." },
+      { "icon": "Shield", "title": "Specialist Access", "desc": "Use skilled support for tax, payroll, accounts, and secretarial work." },
+      { "icon": "TrendingUp", "title": "Room to Grow", "desc": "Free your team to focus on growth, service, and operations." }
+    ]
+  }
+}

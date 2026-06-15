@@ -2,8 +2,12 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
+import { useDoc } from "@/content/ContentContext";
 
 export default function CTASection() {
+  const { cta } = useDoc("home");
+  const { company } = useDoc("global");
+
   return (
     <section className="py-20 md:py-28 bg-white">
       <div className="max-w-7xl mx-auto px-6">
@@ -23,23 +27,23 @@ export default function CTASection() {
           <div className="relative z-10 text-center px-8 py-16 md:py-20">
             <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-widest bg-[#F5C400]/15 border border-[#F5C400]/30 text-[#F5C400] px-4 py-2 rounded-full mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#F5C400]" />
-              Free Consultation
+              {cta.badge}
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-[2.8rem] font-serif font-bold text-white leading-tight mb-5 max-w-2xl mx-auto">
-              Ready to Take Control of Your Finances?
+              {cta.title}
             </h2>
             <p className="text-white/65 text-lg max-w-xl mx-auto mb-10">
-              Book your free consultation today and discover how The Tax Link can help your business thrive.
+              {cta.description}
             </p>
             <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link to="/contact">
+              <Link to={cta.primaryCtaPath}>
                 <Button size="lg" className="rounded-full bg-[#F5C400] hover:bg-[#FFD633] text-[#1E3A6E] px-9 h-13 text-base font-semibold shadow-gold hover:shadow-[0_8px_32px_rgba(245,196,0,0.45)] transition-all">
-                  Book Free Consultation <ArrowRight className="w-4 h-4 ml-2" />
+                  {cta.primaryCtaLabel} <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>
-              <a href="tel:+353851330866">
+              <a href={company.phoneHref}>
                 <Button size="lg" variant="outline" className="rounded-full border-white/20 text-white hover:bg-white/8 px-9 h-13 text-base font-medium transition-all">
-                  <Phone className="w-4 h-4 mr-2" /> +353 85 133 0866
+                  <Phone className="w-4 h-4 mr-2" /> {company.phoneDisplay}
                 </Button>
               </a>
             </div>

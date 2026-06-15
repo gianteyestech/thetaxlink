@@ -1,0 +1,134 @@
+{
+  "company": {
+    "name": "The Tax Link",
+    "tagline": "Chartered Accountants & Business Advisors",
+    "logo": "/the-taxlink-logo.svg",
+    "phoneDisplay": "+353 86 378 3948",
+    "phoneHref": "tel:+353 86 378 3948",
+    "email": "info@thetaxlink.com",
+    "whatsapp": "https://wa.me/353863783948",
+    "address": "D24 NRA0",
+    "hoursShort": "Mon – Fri  9AM – 6PM",
+    "hoursLong": "Mon – Fri: 9:00AM – 6:00PM"
+  },
+  "topBar": {
+    "whatsappLabel": "WhatsApp Us"
+  },
+  "nav": {
+    "homeLabel": "Home",
+    "aboutLabel": "About",
+    "aboutPath": "/about-us",
+    "servicesLabel": "Services",
+    "contactLabel": "Contact",
+    "menuHeading": "Our Services",
+    "viewAllLabel": "View All Services →",
+    "viewAllPath": "/our-services",
+    "ctaLabel": "Book Consultation",
+    "mobileCtaLabel": "Book Free Consultation"
+  },
+  "serviceMenu": [
+    {
+      "name": "Business Advice",
+      "path": "/business-advice"
+    },
+    {
+      "name": "Accounts Preparation",
+      "path": "/accounts-preparation"
+    },
+    {
+      "name": "Taxation",
+      "path": "/taxation"
+    },
+    {
+      "name": "Bookkeeping",
+      "path": "/bookkeeping"
+    },
+    {
+      "name": "Payroll",
+      "path": "/payroll"
+    },
+    {
+      "name": "Corporate & Secretarial",
+      "path": "/corporate-secretarial"
+    },
+    {
+      "name": "Trademark Registration",
+      "path": "/trademark-registration"
+    },
+    {
+      "name": "Technology",
+      "path": "/technology"
+    },
+    {
+      "name": "Marketing",
+      "path": "/marketing"
+    },
+    {
+      "name": "Outsourcing",
+      "path": "/outsourcing"
+    }
+  ],
+  "footer": {
+    "blurb": "Expert Accounting & Tax Solutions — helping you save more and grow faster.",
+    "servicesHeading": "Our Services",
+    "quickLinksHeading": "Quick Links",
+    "contactHeading": "Get In Touch",
+    "copyright": "The Tax Link. All rights reserved.",
+    "serviceLinks": [
+      {
+        "name": "Business Advice",
+        "path": "/business-advice"
+      },
+      {
+        "name": "Accounts Preparation",
+        "path": "/accounts-preparation"
+      },
+      {
+        "name": "Taxation",
+        "path": "/taxation"
+      },
+      {
+        "name": "Bookkeeping",
+        "path": "/bookkeeping"
+      },
+      {
+        "name": "Payroll",
+        "path": "/payroll"
+      },
+      {
+        "name": "Corporate & Secretarial",
+        "path": "/corporate-secretarial"
+      },
+      {
+        "name": "Trademark Registration",
+        "path": "/trademark-registration"
+      }
+    ],
+    "quickLinks": [
+      {
+        "name": "Home",
+        "path": "/"
+      },
+      {
+        "name": "About Us",
+        "path": "/about-us"
+      },
+      {
+        "name": "All Services",
+        "path": "/our-services"
+      },
+      {
+        "name": "Contact Us",
+        "path": "/contact"
+      },
+      {
+        "name": "Privacy Policy",
+        "path": "/privacy"
+      },
+      {
+        "name": "Terms & Conditions",
+        "path": "/terms"
+      }
+    ]
+  }
+}

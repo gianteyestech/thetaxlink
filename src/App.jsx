@@ -3,6 +3,8 @@ import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClientInstance } from '@/lib/query-client';
 import { Toaster } from '@/components/ui/toaster';
 import { Toaster as SonnerToaster } from '@/components/ui/sonner';
+import { ContentProvider } from '@/content/ContentContext';
+import AdminApp from '@/admin/AdminApp';
 import Layout from '@/components/layout/Layout';
 import PageNotFound from '@/lib/PageNotFound';
 import Home from '@/pages/Home';
@@ -25,8 +27,10 @@ import Outsourcing from '@/pages/services/Outsourcing';
 export default function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
+      <ContentProvider>
       <Router>
         <Routes>
+          <Route path="/admin/*" element={<AdminApp />} />
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="about" element={<About />} />
@@ -62,6 +66,7 @@ export default function App() {
       </Router>
       <Toaster />
       <SonnerToaster />
+      </ContentProvider>
     </QueryClientProvider>
   );
 }
