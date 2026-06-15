@@ -1,13 +1,15 @@
 import { useMemo, useState } from "react";
 import { toast } from "sonner";
 import {
-  Save, Download, Undo2, LogOut, ExternalLink, FileText, Lock, CircleDot,
+  Save, Download, Undo2, LogOut, ExternalLink, FileText, Lock, CircleDot, Github, UploadCloud,
 } from "lucide-react";
 import { useContentStore } from "@/content/ContentContext";
 import { DOC_META, DOC_ORDER, labelFor } from "@/content/schema";
 import { isDev, saveDocToDisk, downloadDoc } from "@/content/saveClient";
 import { isAuthed, login, logout } from "./auth";
 import { ObjectEditor } from "./fields";
+import GithubConnect from "./GithubConnect";
+import { isGithubConnected, publishDocToGithub } from "./githubClient";
 
 function docTitle(name) {
   return DOC_META[name]?.title || labelFor(name);
@@ -70,6 +72,9 @@ export default function AdminApp() {
 
   const [selected, setSelected] = useState(docNames[0]);
   const [saving, setSaving] = useState(false);
+  const [publishing, setPublishing] = useState(false);
+  const [showGh, setShowGh] = useState(false);
+  const [ghConnected, setGhConnected] = useState(() => isGithubConnected());
 
   if (!authed) return <LoginScreen onAuthed={() => setAuthed(true)} />;
 
@@ -91,6 +96,28 @@ export default function AdminApp() {
       toast.error(`Save failed: ${err.message}`);
     } finally {
       setSaving(false);
+    }
+  };
+
+  const handlePublish = async () => {
+    if (!ghConnected) {
+      setShowGh(true);
+      return;
+    }
+    setPublishing(true);
+    try {
+      const commit = await publishDocToGithub(selected, doc);
+      store.commitDoc(selected, doc);
+      toast.success(`Published ${selected}.json to GitHub`, {
+        description: commit?.html_url ? "Vercel will redeploy in ~1 min." : undefined,
+        action: commit?.html_url
+          ? { label: "View commit", onClick: () => window.open(commit.html_url, "_blank") }
+          : undefined,
+      });
+    } catch (err) {
+      toast.error(`Publish failed: ${err.message}`);
+    } finally {
+      setPublishing(false);
     }
   };
 
@@ -151,6 +178,14 @@ export default function AdminApp() {
           </div>
           <div className="flex shrink-0 items-center gap-2">
             <button
+              onClick={() => setShowGh(true)}
+              title={ghConnected ? "GitHub connected" : "Connect GitHub"}
+              className="relative inline-flex items-center gap-1.5 rounded-full border border-gray-300 px-3 py-2 text-xs font-semibold text-[#1E3A6E] transition-colors hover:bg-gray-50"
+            >
+              <Github className="h-3.5 w-3.5" />
+              {ghConnected && <span className="absolute -right-0.5 -top-0.5 h-2.5 w-2.5 rounded-full border-2 border-white bg-green-500" />}
+            </button>
+            <button
               onClick={() => { store.resetDoc(selected); toast("Reverted to last saved version."); }}
               disabled={!dirty}
               className="inline-flex items-center gap-1.5 rounded-full border border-gray-300 px-3.5 py-2 text-xs font-semibold text-[#1E3A6E] transition-colors hover:bg-gray-50 disabled:opacity-40"
@@ -161,24 +196,41 @@ export default function AdminApp() {
               onClick={() => downloadDoc(selected, doc)}
               className="inline-flex items-center gap-1.5 rounded-full border border-gray-300 px-3.5 py-2 text-xs font-semibold text-[#1E3A6E] transition-colors hover:bg-gray-50"
             >
-              <Download className="h-3.5 w-3.5" /> Download JSON
+              <Download className="h-3.5 w-3.5" /> Download
             </button>
+            {isDev && (
+              <button
+                onClick={handleSave}
+                disabled={saving || !dirty}
+                className="inline-flex items-center gap-1.5 rounded-full border border-[#1E3A6E] px-3.5 py-2 text-xs font-semibold text-[#1E3A6E] transition-colors hover:bg-[#1E3A6E]/5 disabled:opacity-40"
+              >
+                <Save className="h-3.5 w-3.5" /> {saving ? "Saving…" : "Save to disk"}
+              </button>
+            )}
             <button
-              onClick={handleSave}
-              disabled={saving || (!dirty && isDev)}
+              onClick={handlePublish}
+              disabled={publishing}
+              title={ghConnected ? "Commit to GitHub and redeploy" : "Connect GitHub to publish"}
               className="inline-flex items-center gap-1.5 rounded-full bg-[#1E3A6E] px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-[#162d57] disabled:opacity-40"
             >
-              <Save className="h-3.5 w-3.5" /> {saving ? "Saving…" : isDev ? "Save" : "Save (download)"}
+              <UploadCloud className="h-3.5 w-3.5" /> {publishing ? "Publishing…" : "Publish"}
             </button>
           </div>
         </header>
 
         <div className="flex-1 overflow-y-auto px-6 py-6">
           <div className="mx-auto max-w-3xl">
-            {!isDev && (
+            {!isDev && !ghConnected && (
               <div className="mb-5 rounded-xl border border-[#F5C400]/40 bg-[#F5C400]/10 px-4 py-3 text-sm text-[#1E3A6E]">
-                You're on a built/deployed copy. Edits preview live in this browser, but
-                <strong> Save </strong> downloads the JSON file — commit it to the repo to publish for everyone.
+                Edits preview live in this browser only. To publish for everyone,
+                <strong> Connect GitHub </strong> (top-right) once, then hit <strong>Publish</strong> — it
+                commits to your repo and Vercel redeploys. Or use <strong>Download</strong> to commit by hand.
+              </div>
+            )}
+            {!isDev && ghConnected && (
+              <div className="mb-5 rounded-xl border border-green-300 bg-green-50 px-4 py-3 text-sm text-[#1E3A6E]">
+                GitHub connected. <strong>Publish</strong> commits this page to your repo and Vercel
+                redeploys (~1 min). Changes go live for everyone.
               </div>
             )}
             {doc && typeof doc === "object" ? (
@@ -189,6 +241,8 @@ export default function AdminApp() {
           </div>
         </div>
       </main>
+
+      {showGh && <GithubConnect onClose={() => setShowGh(false)} onChange={setGhConnected} />}
     </div>
   );
 }
